@@ -14,7 +14,7 @@ This package is part of the Pharo AI project: It contains implementations, tests
 ```
 Metacello new
    baseline: 'MLMetrics';
-   repository: 'github://pharo-ai/MLMetrics';
+   repository: 'github://pharo-ai/MLMetrics:main/src';
    load.
 ```
 
