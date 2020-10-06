@@ -1,0 +1,17 @@
+SmalltalkCISpec {
+  #loading : [
+    SCIMetacelloLoadSpec {
+      #baseline : 'MLMetrics',
+      #directory : 'src',
+      #platforms : [ #pharo ]
+    }
+  ],
+  #testing : {
+    #coverage : {
+      #packages : [ 'MLMetrics*' ]
+    },
+    #include : {  
+       #packages : [ 'MLMetrics-Tests*' ]
+    }
+  }
+}
