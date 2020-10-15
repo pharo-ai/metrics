@@ -11,13 +11,6 @@ PMMatrix >> sumColumns [
 ]
 
 { #category : #'*MLMetrics' }
-PMMatrix >> sumMatrix [
-	" Answer an <Integer> with the sum of all the receiver's vectors "
-
-	^ self sum sum
-]
-
-{ #category : #'*MLMetrics' }
 PMMatrix >> take: anInteger [ 
 	" Answer a <PMMatrix> with the receiver's binomial coefficient at each element for anInteger "
 	

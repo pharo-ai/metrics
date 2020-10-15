@@ -1,7 +1,7 @@
 Class {
 	#name : #MLRandIndexTest,
 	#superclass : #MLMetricTest,
-	#category : #'MLMetrics-Tests'
+	#category : #'MLMetrics-Tests-ClusterMeasure-RandIndex'
 }
 
 { #category : #running }
@@ -31,12 +31,23 @@ MLRandIndexTest >> testBuildMatrix [
 ]
 
 { #category : #test }
-MLRandIndexTest >> testScoreWith [
+MLRandIndexTest >> testClusterAClusterB [
 
 	| score |
 	
-	score := (MLRandIndex score: partitionA with: partitionB).
+	score := (MLRandIndex clusterA: partitionA clusterB: partitionB).
 	self 
 		assert: (score truncateTo: 0.01)
+		equals: 0.46.
+]
+
+{ #category : #test }
+MLRandIndexTest >> testComputeMetric [
+
+	| score |
+	
+	score := (MLRandIndex new clusterA: partitionA; clusterB: partitionB).
+	self 
+		assert: (score computeMetric truncateTo: 0.01)
 		equals: 0.46.
 ]

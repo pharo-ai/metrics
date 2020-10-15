@@ -5,5 +5,5 @@ Class {
 		'partitionA',
 		'partitionB'
 	],
-	#category : #'MLMetrics-Tests'
+	#category : #'MLMetrics-Tests-ClusterMeasure-RandIndex'
 }
