@@ -8,7 +8,8 @@ Class {
 	#superclass : #Object,
 	#instVars : [
 		'clusterA',
-		'clusterB'
+		'clusterB',
+		'round'
 	],
 	#category : #'MLMetrics-ClusterMeasure-RandIndex'
 }
@@ -21,6 +22,13 @@ MLRandIndex class >> clusterA: firstCluster clusterB: secondCluster [
 		computeMetric
 
 	
+]
+
+{ #category : #'instance creation' }
+MLRandIndex class >> names [
+	" Answer a <Collection> of receiver's names in English language "
+	
+	self subclassResponsibility
 ]
 
 { #category : #accessing }
@@ -67,6 +75,12 @@ MLRandIndex >> computeMetric [
 ]
 
 { #category : #accessing }
+MLRandIndex >> defaultNumberOfWishedDecimal [
+
+	^ 3
+]
+
+{ #category : #accessing }
 MLRandIndex >> initializeWithClusterA: firstCluster clusterB: secondCluster [
 	" Private - Initialize the receiver "
 
@@ -75,4 +89,18 @@ MLRandIndex >> initializeWithClusterA: firstCluster clusterB: secondCluster [
 	self assert: [ secondCluster noneSatisfy: #isNil ].
 	self clusterA: firstCluster.
 	self clusterB: secondCluster.
+]
+
+{ #category : #accessing }
+MLRandIndex >> numberOfWishedDecimal [
+	" Answer the <Number> of the wished decimal in the result "
+
+	^ round
+		ifNil: [ round := self defaultNumberOfWishedDecimal ]
+]
+
+{ #category : #accessing }
+MLRandIndex >> numberOfWishedDecimal: anInteger [
+
+	round := anInteger
 ]

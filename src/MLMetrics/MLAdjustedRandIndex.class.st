@@ -4,6 +4,17 @@ Class {
 	#category : #'MLMetrics-ClusterMeasure-RandIndex'
 }
 
+{ #category : #'instance creation' }
+MLAdjustedRandIndex class >> names [
+	" See superimplementor's comment "
+
+	^ #(
+		'Adjusted Rand Index'
+		'HA'
+		'ARI'
+		)
+]
+
 { #category : #accessing }
 MLAdjustedRandIndex >> computeMetric [
 	" Answer a <Float> with the adjusted rand index between cluster assignments in c1 and cluster assignments in c2 "
