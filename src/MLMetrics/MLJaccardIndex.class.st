@@ -11,6 +11,8 @@ MLJaccardIndex class >> names [
 	^ #(
 		'Jaccard Index'
 		'Intersection over union'
+		'Tanimoto coefficient'
+		'IOU'
 		)
 ]
 

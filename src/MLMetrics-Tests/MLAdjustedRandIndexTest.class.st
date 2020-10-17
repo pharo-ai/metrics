@@ -18,32 +18,30 @@ MLAdjustedRandIndexTest >> setUp [
 { #category : #test }
 MLAdjustedRandIndexTest >> testClusterAClusterB [
 
-	| ari |
+	| index |
 	
-	partitionA := #(1 2 3 3 2 1 1 3 3 1 2 2).
-	partitionB := #(3 2 3 2 2 1 1 2 3 1 3 1).
-	ari := (MLAdjustedRandIndex 
-			clusterA: partitionA
-			clusterB: partitionB).
-	self assert: (ari truncateTo: 0.0001) equals: 0.0833
+	index := (MLAdjustedRandIndex 
+			clusterA: #(1 2 3 3 2 1 1 3 3 1 2 2)
+			clusterB: #(3 2 3 2 2 1 1 2 3 1 3 1)).
+	self assert: index equals: 0.083
 ]
 
 { #category : #test }
 MLAdjustedRandIndexTest >> testComputeMetric [
 
-	| ari |
+	| instance |
 	
-	partitionA := #(1 2 3 3 2 1 1 3 3 1 2 2).
-	partitionB := #(3 2 3 2 2 1 1 2 3 1 3 1).
-	ari := (MLAdjustedRandIndex new
-			clusterA: partitionA;
-			clusterB: partitionB).
-	self assert: (ari computeMetric truncateTo: 0.0001) equals: 0.0833.
+	instance := (MLAdjustedRandIndex new
+			clusterA: #(1 2 3 3 2 1 1 3 3 1 2 2);
+			clusterB: #(3 2 3 2 2 1 1 2 3 1 3 1)).
+	self assert: instance computeMetric equals: 0.083.
 	
-	partitionA := #(0 1 0 1).
-	partitionB := #(0 0 1 1).
-	ari := (MLAdjustedRandIndex new
-			clusterA: partitionA;
-			clusterB: partitionB).
-	self assert: (ari computeMetric truncateTo: 0.0001) equals: 0.4999 negated.
+	instance clusterA: #(0 1 0 1); clusterB: #(0 0 1 1).
+	self assert: instance computeMetric equals: 0.5 negated.
+	
+	instance clusterA: #(0 0 0 0); clusterB: #(0 0 0 0).
+	self assert: instance computeMetric equals: 1.0.
+		
+	instance clusterA: #(0 0 0 0); clusterB: #(0 1 2 3).
+	self assert: instance computeMetric equals: 0
 ]

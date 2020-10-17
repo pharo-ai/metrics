@@ -29,7 +29,7 @@ MLFowlkesMallowsIndex >> computeMetric [
 	tp_plus_fn := (ctab sumColumns take: 2) sum.
 	fp := tp_plus_fp - tp.
 	fn := tp_plus_fn - tp.
-	^ ((tp/((tp + fp))) * (tp/(tp + fn))) sqrt
+	^ (((tp/((tp + fp))) * (tp/(tp + fn))) sqrt) round: self numberOfWishedDecimal
 
 
 ]

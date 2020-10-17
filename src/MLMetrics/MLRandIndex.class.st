@@ -70,7 +70,7 @@ MLRandIndex >> computeMetric [
 	y := self buildMatrix: self clusterB.
 	sg := (x - y) abs sumMatrix / 2.
 	binCoeff := x size take: 2.
-	^ (1 - (sg / binCoeff)) asFloat
+	^ ((1 - (sg / binCoeff)) asFloat) round: self numberOfWishedDecimal
 
 ]
 
