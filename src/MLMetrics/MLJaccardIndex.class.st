@@ -1,6 +1,6 @@
 Class {
 	#name : #MLJaccardIndex,
-	#superclass : #MLRandIndex,
+	#superclass : #MLClusteringMetric,
 	#category : #'MLMetrics-ClusterMeasure-RandIndex'
 }
 

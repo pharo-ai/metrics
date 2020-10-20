@@ -18,6 +18,5 @@ MLMirkinIndexTest >> setUp [
 { #category : #test }
 MLMirkinIndexTest >> testComputeMetric [
 
-	self flag: #toImplement.
 	self assert: false
 ]

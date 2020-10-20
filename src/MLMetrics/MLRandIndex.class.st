@@ -5,12 +5,7 @@ The Rand index in data clustering, is a measure of the similarity between two da
 "
 Class {
 	#name : #MLRandIndex,
-	#superclass : #Object,
-	#instVars : [
-		'clusterA',
-		'clusterB',
-		'round'
-	],
+	#superclass : #MLClusteringMetric,
 	#category : #'MLMetrics-ClusterMeasure-RandIndex'
 }
 
@@ -26,9 +21,13 @@ MLRandIndex class >> clusterA: firstCluster clusterB: secondCluster [
 
 { #category : #'instance creation' }
 MLRandIndex class >> names [
-	" Answer a <Collection> of receiver's names in English language "
+	" See superimplementor's comment "
 	
-	self subclassResponsibility
+	^ #(
+		'Rand Index'
+		'RI'
+		'General Rand Index'
+		)
 ]
 
 { #category : #accessing }
@@ -39,26 +38,6 @@ MLRandIndex >> buildMatrix: aCollection [
 	^ aCollection collect: [ :index | 
 		(index - aCollection) abs 
 			collect: [ :each | each min: 1 ] ]
-]
-
-{ #category : #accessing }
-MLRandIndex >> clusterA [
-	^ clusterA
-]
-
-{ #category : #accessing }
-MLRandIndex >> clusterA: anObject [
-	clusterA := anObject
-]
-
-{ #category : #accessing }
-MLRandIndex >> clusterB [
-	^ clusterB
-]
-
-{ #category : #accessing }
-MLRandIndex >> clusterB: anObject [
-	clusterB := anObject
 ]
 
 { #category : #accessing }
@@ -74,33 +53,11 @@ MLRandIndex >> computeMetric [
 
 ]
 
-{ #category : #accessing }
-MLRandIndex >> defaultNumberOfWishedDecimal [
-
-	^ 3
-]
-
-{ #category : #accessing }
+{ #category : #initialization }
 MLRandIndex >> initializeWithClusterA: firstCluster clusterB: secondCluster [
 	" Private - Initialize the receiver "
 
+	super initializeWithClusterA: firstCluster clusterB: secondCluster.
 	self assert: [ firstCluster size = secondCluster size ].
-	self assert: [ firstCluster noneSatisfy: #isNil ].
-	self assert: [ secondCluster noneSatisfy: #isNil ].
-	self clusterA: firstCluster.
-	self clusterB: secondCluster.
-]
 
-{ #category : #accessing }
-MLRandIndex >> numberOfWishedDecimal [
-	" Answer the <Number> of the wished decimal in the result "
-
-	^ round
-		ifNil: [ round := self defaultNumberOfWishedDecimal ]
-]
-
-{ #category : #accessing }
-MLRandIndex >> numberOfWishedDecimal: anInteger [
-
-	round := anInteger
 ]
