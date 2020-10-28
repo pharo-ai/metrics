@@ -3,10 +3,17 @@ Abstract class grouping common behavior for both internal and external clusterin
 
 ## Public API and Key Messages
 
-- clusterA: 									By convention, it represents the collection where the curated or annotated labels in your trained collection.
-- clusterB: 									By convention, it represent the collection where the predictions labels are contained.
+Any subclass expects to be instantiated with, at least, the following messages:
+
+- clusterA 									By convention, it represents the collection where the curated or annotated labels in your trained collection.
+- clusterB 									By convention, it represent the collection where the predictions labels are contained.
+
+You could also configure:								
+	
 - numberOfWishedDecimal: 				Set the number of wished decimals you want to get in the result.
-- (class side) availableMetricNames 	Answer a <Collection> of <String> with synonyms for each of the index subclasses.
+
+## Class side
+- availableMetricNames 					Answer a <Collection> of <String> with synonyms for each of the index subclasses.
 
 ## Internal Representation and Key Implementation Points.
 

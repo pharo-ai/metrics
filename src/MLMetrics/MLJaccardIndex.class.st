@@ -1,7 +1,7 @@
 "
-The Jaccard Index, also known as the Jaccard similarity coefficient, is a Float value between 0.0 and 1.0. It was originally designed as a general similarity measure between two non-empty sets, but it can be used as an evaluation measure of the degree of overlap between vectors. Intuitively, it can be thought as the size of the intersection divided by the size of the union. As usual, the closer to 1.0, the more similar the two datasets, the closer to 0.0 the more dissimilar. This metric should not be confused with the """"Jaccard distance"""", which gives a """"dissimilarity"""" measure.
+The **Jaccard Index**, also known as the **Jaccard similarity coefficient**, is a `Float` value between 0.0 and 1.0. It was originally designed as a general similarity measure between two non-empty sets, but it can be used as an evaluation measure of the degree of overlap between vectors. Intuitively, it can be thought as the size of the intersection divided by the size of the union. As usual, the closer to 1.0, the more similar the two datasets, the closer to 0.0 the more dissimilar. This metric should not be confused with the **Jaccard distance**, which provides a ""dissimilarity"" measure.
 
-==MLJaccardIndex== implements the set-based version of the Jaccard index, which is easier to read and interpret when you have flat clustering results, i.e. without assignments information.
+This class implements the **set-based version** of the Jaccard index, which is easier to read and interpret when you have flat clustering results, i.e. without assignments information.
 
 ## Definition
 
