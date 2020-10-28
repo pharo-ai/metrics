@@ -1,3 +1,15 @@
+"
+==MLWeightedJaccardIndex== implements the vector-based version of the Jaccard index, which is easier to read and interpret when you have assignment information for each partition in your clustering results.
+
+## Public API and Key Messages
+
+```language=Pharo&caption=Usage on two different clustering results&label=code1
+MLWeightedJaccardIndex
+	clusterA: #(0 0 0 0)
+	clusterB: #(0 1 2 3)
+```
+
+"
 Class {
 	#name : #MLWeightedJaccardIndex,
 	#superclass : #MLRandIndex,

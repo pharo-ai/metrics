@@ -1,3 +1,23 @@
+"
+Abstract class grouping common behavior for both internal and external clustering evaluation metrics. It also can be used to query different features of metric algorithms (here represented by subclasses).
+
+## Public API and Key Messages
+
+- clusterA: 									By convention, it represents the collection where the curated or annotated labels in your trained collection.
+- clusterB: 									By convention, it represent the collection where the predictions labels are contained.
+- numberOfWishedDecimal: 				Set the number of wished decimals you want to get in the result.
+- (class side) availableMetricNames 	Answer a <Collection> of <String> with synonyms for each of the index subclasses.
+
+## Internal Representation and Key Implementation Points.
+
+Instance Variables
+	clusterA:		<Collection>
+	clusterB:		<Collection>
+	round:			<Integer>
+
+
+
+"
 Class {
 	#name : #MLClusteringMetric,
 	#superclass : #Object,

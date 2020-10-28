@@ -1,3 +1,22 @@
+"
+The ''Fowlkes–Mallows Index'', also known as G-measure, is a Float value between 0.0 and 1.0. It is the geometric mean of precision and recall between two clusterings. The index can be used either for comparing both flat and hierarchical clusterings.
+
+## Definition
+
+The definition of the index is: 
+&
+\[ \text{FMI} = \frac{\text{TP}}{\sqrt{(\text{TP} + \text{FP}) (\text{TP} + \text{FN})}} \]
+&
+
+## Public API and Key Messages
+
+```language=Pharo&caption=Usage on two exact clustering results&label=code1
+MLFowlkesMallowsIndex
+	clusterA: #(1 1 2 3 3)
+	clusterB: #(1 1 2 2 3)
+```
+
+"
 Class {
 	#name : #MLFowlkesMallowsIndex,
 	#superclass : #MLRandIndex,

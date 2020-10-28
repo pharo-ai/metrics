@@ -1,5 +1,40 @@
 "
-The Rand index in data clustering, is a measure of the similarity between two data clusterings.
+The Rand index is a Float between 0.0 and 1.0 representing the number of agreements between two data clusterings, presumably from two different methods on the same data set. You may use this class to compare how two partitions agreed. 
+
+A value of 1.0 means that clusterings between two methods were the same, and these partitions agree perfectly, and 0.0 means that the two data clusterings disagree on any pair of points.
+
+Subclasses may implement enhaced or alternative indexes of this external evaluation method.
+
+## Definition
+
+The mathematical definition of the index is: 
+&
+\[ R(C_1,C_2) = \frac{a+b}{a+b+c+d} = \frac{a+b}{{n \choose 2 }} \]
+&
+
+## Public API and Key Messages
+
+The Rand Index could be instantiated with two Collections directly from a class method. By convention, the first collection (clusterA) are the ""ground truth labels"" and the second collection (clusterB) contains the labels from your clustering algorithm results. i.e. the predictions.
+
+```language=Pharo&caption=Usage on two exact clustering results&label=code1
+MLRandIndex 
+    clusterA: #(1 1 2 3 3) 
+    clusterB: #(1 1 2 3 3).
+```
+
+Another form of usage is instantiating the metric and sending the #computeMetric message.
+
+```language=Pharo&caption=Usage on two exact clustering results&label=code1
+MLRandIndex new
+    clusterA: #(1 1 2 3 3);
+    clusterB: #(1 1 2 2 3);
+	computeMetric.
+```
+
+## Notes
+
+Subclasses inherits a few helper methods and a very basic protocol. Essentially, the #computeMetric method should be implemented.
+
 
 
 "

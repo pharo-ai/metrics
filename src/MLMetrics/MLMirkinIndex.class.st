@@ -1,3 +1,6 @@
+"
+Work in progress
+"
 Class {
 	#name : #MLMirkinIndex,
 	#superclass : #MLRandIndex,
