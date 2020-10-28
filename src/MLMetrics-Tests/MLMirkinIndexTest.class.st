@@ -14,9 +14,3 @@ MLMirkinIndexTest >> setUp [
 	partitionA := #(0 1 2 5 6 8 9).
 	partitionB := #(0 2 3 4 5 7 9).
 ]
-
-{ #category : #test }
-MLMirkinIndexTest >> testComputeMetric [
-
-	self assert: false
-]
