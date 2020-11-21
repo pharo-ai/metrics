@@ -1,5 +1,5 @@
 "
-==MLWeightedJaccardIndex== implements the vector-based version of the Jaccard index, which is easier to read and interpret when you have assignment information for each partition in your clustering results.
+This class implements the **vector-based version** of the Jaccard index implemented in `MLJaccardIndex`. It is easier to read and interpret when you have assignment information for each partition in your clustering results.
 
 ## Public API and Key Messages
 
