@@ -1,5 +1,5 @@
 "
-The ""Adjusted Rand Index"" is an enhacement of the Rand Index. This class can be used to obtain a Float between -1.0 and 1.0, where positive values mean that pairs in the known clusters and predicted clusters are similar, being 1.0 the perfect agreement and 0.0 a chance agreement, and negative values mean that pairs in the known clusters and predicted clusters are highly different. In short, the higher the value of ARI, the better the predictive ability of the evaluated clustering method. The ""adjusted"" part comes from the fact that a random result is scored as 0.
+The ''Adjusted Rand Index'' is an enhacement of the Rand Index. This class can be used to obtain a ==Float== value between -1.0 and 1.0, where positive values mean that pairs in the known clusters and predicted clusters are similar, being 1.0 the perfect agreement and 0.0 a chance agreement, and negative values mean that pairs in the known clusters and predicted clusters are highly different. In short, the higher the value of ARI, the better the predictive ability of the evaluated clustering method. The ""adjusted"" part comes from the fact that a random result is scored as 0.
 
 This class contains an implementation of the ''Hubert and Arabie'' of HA variant of the index. You could use the following standard interpretation of resulting index:
 
@@ -33,7 +33,7 @@ Class {
 	#category : #'MLMetrics-ClusterMeasure-RandIndex'
 }
 
-{ #category : #'instance creation' }
+{ #category : #accessing }
 MLAdjustedRandIndex class >> names [
 	" See superimplementor's comment "
 

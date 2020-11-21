@@ -1,6 +1,9 @@
 "
 Abstract class grouping common behavior for both internal and external clustering evaluation metrics. It also can be used to query different features of metric algorithms (here represented by subclasses).
 
+External evaluation indices are used when true class labels are known. Examples are: ==MLMirkinIndex==, ==MLAdjustedRandIndex==, ==MLRandIndex==.
+Internal evaluation indices when true class labels are unknown. Example are: ==MLSilhouetteIndex== and ==MLCalinskiHarabaszIndex==.
+
 ## Public API and Key Messages
 
 - clusterA: 									By convention, it represents the collection where the curated or annotated labels in your trained collection.
@@ -38,7 +41,7 @@ MLClusteringMetric class >> availableMetricNames [
 		thenCollect: #names
 ]
 
-{ #category : #'instance creation' }
+{ #category : #accessing }
 MLClusteringMetric class >> names [
 	" Answer a <Collection> of receiver's names in English language "
 	

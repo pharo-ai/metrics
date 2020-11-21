@@ -1,5 +1,5 @@
 "
-The ''Fowlkes–Mallows Index'', also known as G-measure, is a Float value between 0.0 and 1.0. It is the geometric mean of precision and recall between two clusterings. The index can be used either for comparing both flat and hierarchical clusterings.
+The ''Fowlkes–Mallows Index'', also known as G-measure, is a ==Float== value between 0.0 and 1.0. It is the geometric mean of precision and recall between two clusterings. The index can be used either for comparing both flat and hierarchical clusterings.
 
 ## Definition
 
@@ -23,7 +23,7 @@ Class {
 	#category : #'MLMetrics-ClusterMeasure-RandIndex'
 }
 
-{ #category : #'instance creation' }
+{ #category : #accessing }
 MLFowlkesMallowsIndex class >> names [
 	" See superimplementor's comment "
 

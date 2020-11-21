@@ -15,7 +15,7 @@ MLJaccardIndexTest >> setUp [
 	partitionB := #(0 2 3 4 5 7 9).
 ]
 
-{ #category : #test }
+{ #category : #testing }
 MLJaccardIndexTest >> testComputeMetric [
 
 	| instance |

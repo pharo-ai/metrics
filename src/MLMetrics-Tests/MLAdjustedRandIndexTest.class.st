@@ -15,7 +15,7 @@ MLAdjustedRandIndexTest >> setUp [
 	partitionB := #(3 2 3 2 2 1 1 2 3 1 3 1).
 ]
 
-{ #category : #test }
+{ #category : #testing }
 MLAdjustedRandIndexTest >> testClusterAClusterB [
 
 	| index |
@@ -26,7 +26,7 @@ MLAdjustedRandIndexTest >> testClusterAClusterB [
 	self assert: index equals: 0.083
 ]
 
-{ #category : #test }
+{ #category : #testing }
 MLAdjustedRandIndexTest >> testComputeMetric [
 
 	| instance |

@@ -1,5 +1,15 @@
 "
-Work in progress
+The ''Mirkin Index'' is another external validity index which is a specialization of the unadjusted Rand Index. 
+
+## Definition
+
+## Public API and Key Messages
+
+```language=Pharo&caption=Mirkin usage&label=code1
+MLMirkinIndex
+	clusterA: #(0 0 0 0)
+	clusterB: #(0 1 2 3)
+```
 "
 Class {
 	#name : #MLMirkinIndex,
@@ -7,12 +17,13 @@ Class {
 	#category : #'MLMetrics-ClusterMeasure-RandIndex'
 }
 
-{ #category : #'instance creation' }
+{ #category : #accessing }
 MLMirkinIndex class >> names [
 	" See superimplementor's comment "
 	
 	^ #(
 		'Mirkin Index'
+		'Equivalence Mismatch Distance'
 		)
 ]
 

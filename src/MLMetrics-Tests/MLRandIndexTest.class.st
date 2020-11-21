@@ -14,7 +14,7 @@ MLRandIndexTest >> setUp [
 
 ]
 
-{ #category : #test }
+{ #category : #testing }
 MLRandIndexTest >> testBuildMatrix [
 
 	| actual expected |
@@ -30,7 +30,7 @@ MLRandIndexTest >> testBuildMatrix [
 
 ]
 
-{ #category : #test }
+{ #category : #testing }
 MLRandIndexTest >> testClusterA [
 
 	| instance |
@@ -41,7 +41,7 @@ MLRandIndexTest >> testClusterA [
 
 ]
 
-{ #category : #test }
+{ #category : #testing }
 MLRandIndexTest >> testClusterAClusterB [
 
 	| score |
@@ -52,7 +52,7 @@ MLRandIndexTest >> testClusterAClusterB [
 		equals: 0.46.
 ]
 
-{ #category : #test }
+{ #category : #testing }
 MLRandIndexTest >> testClusterB [
 
 	| instance |
@@ -63,7 +63,7 @@ MLRandIndexTest >> testClusterB [
 
 ]
 
-{ #category : #test }
+{ #category : #testing }
 MLRandIndexTest >> testComputeMetric [
 
 	| instance |
@@ -84,13 +84,13 @@ MLRandIndexTest >> testComputeMetric [
 		equals: 0
 ]
 
-{ #category : #test }
+{ #category : #testing }
 MLRandIndexTest >> testDefaultNumberOfWishedDecimal [
 
 	self assert: (MLRandIndex new defaultNumberOfWishedDecimal isKindOf: Number)
 ]
 
-{ #category : #test }
+{ #category : #testing }
 MLRandIndexTest >> testNumberOfWishedDecimal [
 
 	| instance |

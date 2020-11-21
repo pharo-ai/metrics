@@ -17,6 +17,15 @@ Class {
 }
 
 { #category : #accessing }
+MLWeightedJaccardIndex class >> names [
+	" See superimplementor's comment "
+	
+	^ #(
+		'Mirkin Index'
+		)
+]
+
+{ #category : #accessing }
 MLWeightedJaccardIndex >> computeMetric [
 	" Answer a <Float> with the Fowlkes-Mallos index between the receiver's cluster assignments in clusterA and clusterB "
 	

@@ -15,7 +15,7 @@ MLFowlkesMallowsIndexTest >> setUp [
 	partitionB := #(2 1 2 2).
 ]
 
-{ #category : #test }
+{ #category : #testing }
 MLFowlkesMallowsIndexTest >> testComputeMetric [
 
 	| instance |

@@ -32,7 +32,7 @@ Class {
 	#category : #'MLMetrics-ClusterMeasure-RandIndex'
 }
 
-{ #category : #'instance creation' }
+{ #category : #accessing }
 MLJaccardIndex class >> names [
 	" See superimplementor's comment "
 	

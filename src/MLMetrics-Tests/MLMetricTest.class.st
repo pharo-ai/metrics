@@ -7,3 +7,8 @@ Class {
 	],
 	#category : #'MLMetrics-Tests-ClusterMeasure-RandIndex'
 }
+
+{ #category : #testing }
+MLMetricTest >> testComputeMetric [
+	^ self subclassResponsibility
+]

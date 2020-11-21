@@ -1,5 +1,5 @@
 "
-The Rand index is a Float between 0.0 and 1.0 representing the number of agreements between two data clusterings, presumably from two different methods on the same data set. You may use this class to compare how two partitions agreed. 
+The ''Rand index'' is a ==Float== between 0.0 and 1.0 representing the number of agreements between two data clusterings, presumably from two different methods on the same data set. You may use this class to compare how two partitions agreed. 
 
 A value of 1.0 means that clusterings between two methods were the same, and these partitions agree perfectly, and 0.0 means that the two data clusterings disagree on any pair of points.
 
@@ -54,7 +54,7 @@ MLRandIndex class >> clusterA: firstCluster clusterB: secondCluster [
 	
 ]
 
-{ #category : #'instance creation' }
+{ #category : #accessing }
 MLRandIndex class >> names [
 	" See superimplementor's comment "
 	
@@ -62,6 +62,7 @@ MLRandIndex class >> names [
 		'Rand Index'
 		'RI'
 		'General Rand Index'
+		'Unadjusted Rand Index'
 		)
 ]
 
