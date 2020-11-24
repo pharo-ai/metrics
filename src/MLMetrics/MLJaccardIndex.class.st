@@ -46,7 +46,7 @@ MLJaccardIndex class >> names [
 
 { #category : #accessing }
 MLJaccardIndex >> computeMetric [
-	" See superimplementor's comment "
+	" Answer a <Float> with the Jaccard index between the receiver's cluster assignments in clusterA and clusterB "
 
 	^ (self clusterA isEmpty and: [ self clusterB isEmpty ])
 		ifTrue: [ 1 ]

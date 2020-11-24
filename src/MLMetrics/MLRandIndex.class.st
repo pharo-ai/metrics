@@ -85,7 +85,7 @@ MLRandIndex >> buildMatrix: aCollection [
 
 { #category : #accessing }
 MLRandIndex >> computeMetric [
-	" Answer a <Float> with the rand index between cluster assignments in c1 and cluster assignments in c2 "
+	" Answer a <Float> with the Rand index between cluster assignments in c1 and cluster assignments in c2 "
 	
 	| x y sg binCoeff |
 	x := self buildMatrix: self clusterA.

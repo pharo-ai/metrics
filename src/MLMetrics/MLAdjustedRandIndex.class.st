@@ -46,7 +46,7 @@ MLAdjustedRandIndex class >> names [
 
 { #category : #accessing }
 MLAdjustedRandIndex >> computeMetric [
-	" Answer a <Float> with the adjusted rand index between cluster assignments in c1 and cluster assignments in c2 "
+	" Answer a <Float> with the adjusted Rand index between cluster assignments in c1 and cluster assignments in c2 "
 	
 	| ctab sumnij sumai sumbj nTwo expectedIndex maximumIndex |
 	ctab := self clusterA asPMVector crossTabulateWith: self clusterB asPMVector.

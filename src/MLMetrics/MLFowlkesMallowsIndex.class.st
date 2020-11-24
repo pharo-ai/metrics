@@ -38,7 +38,7 @@ MLFowlkesMallowsIndex class >> names [
 
 { #category : #accessing }
 MLFowlkesMallowsIndex >> computeMetric [
-	" Answer a <Float> with the Fowlkes-Mallos index between the receiver's cluster assignments in clusterA and clusterB "
+	" Answer a <Float> with the Fowlkes-Mallows index between the receiver's cluster assignments in clusterA and clusterB "
 	
 	| ctab tp tp_plus_fp tp_plus_fn fp fn |
 
