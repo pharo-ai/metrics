@@ -6,7 +6,6 @@ Class {
 
 { #category : #running }
 MLRandIndexTest >> setUp [
-	"Hooks that subclasses may override to define the fixture of test."
 
 	super setUp.
 	partitionA := #( 0 1 1 1 0 0 ).
@@ -45,7 +44,6 @@ MLRandIndexTest >> testClusterA [
 MLRandIndexTest >> testClusterAClusterB [
 
 	| score |
-	
 	score := (MLRandIndex clusterA: partitionA clusterB: partitionB).
 	self 
 		assert: (score truncateTo: 0.01)

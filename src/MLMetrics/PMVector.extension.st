@@ -8,7 +8,7 @@ PMVector >> crossTabulateWith: aPMVector [
 			(1 to: self size) 
 				inject: 0 
 				into: [ :accum :i |
-					(((self at: i) = each1) and: ((aPMVector at: i) = each2))
+					(((self at: i) = each1) & ((aPMVector at: i) = each2))
 						ifTrue: [ accum + 1 ]
 						ifFalse: [ accum ] ] ] ]).
 
@@ -16,13 +16,13 @@ PMVector >> crossTabulateWith: aPMVector [
 
 { #category : #'*MLMetrics' }
 PMVector >> take: anInteger [ 
-	" Answer a <PMMatrix> with the receiver's binomial coefficient at each element for anInteger "
+	"Answer a <PMMatrix> with the receiver's binomial coefficient at each element for anInteger"
 	
-	^ self collect: [ : each | each take: anInteger ].
+	^ self collect: [ :each | each take: anInteger ]
 ]
 
 { #category : #'*MLMetrics' }
 PMVector >> uniqueValues [
 	
-	^ self asSet asArray.
+	^ self asSet asArray
 ]

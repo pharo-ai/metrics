@@ -11,9 +11,8 @@ Class {
 MLClusteringMetricTest >> testAvailableMetricNames [
 
 	| metrics |
-	
 	metrics := MLClusteringMetric availableMetricNames.
 	self deny: metrics isEmpty.
-	self assert: (metrics allSatisfy: #notEmpty).
-	self assert: (metrics flattened allSatisfy: [ : metric | metric isKindOf: String ])
+	self assert: (metrics allSatisfy: [:each | each notEmpty]).
+	self assert: (metrics flattened allSatisfy: [ :metric | metric isKindOf: String ])
 ]

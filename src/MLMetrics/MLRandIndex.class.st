@@ -75,8 +75,8 @@ MLRandIndex class >> names [
 
 { #category : #accessing }
 MLRandIndex >> buildMatrix: aCollection [
-	" Answer a <Collection> of points that are in the same vs different groups.
-	Different groups are 1, same groups are 0 "
+	"Answer a <Collection> of points that are in the same vs different groups.
+	Different groups are 1, same groups are 0"
 
 	^ aCollection collect: [ :index | 
 		(index - aCollection) abs 
@@ -85,7 +85,7 @@ MLRandIndex >> buildMatrix: aCollection [
 
 { #category : #accessing }
 MLRandIndex >> computeMetric [
-	" Answer a <Float> with the Rand index between cluster assignments in c1 and cluster assignments in c2 "
+	"Answer a <Float> with the Rand index between cluster assignments in c1 and cluster assignments in c2"
 	
 	| x y sg binCoeff |
 	x := self buildMatrix: self clusterA.
@@ -98,7 +98,7 @@ MLRandIndex >> computeMetric [
 
 { #category : #initialization }
 MLRandIndex >> initializeWithClusterA: firstCluster clusterB: secondCluster [
-	" Private - Initialize the receiver "
+	"Private - Initialize the receiver"
 
 	super initializeWithClusterA: firstCluster clusterB: secondCluster.
 	self assert: [ firstCluster size = secondCluster size ].

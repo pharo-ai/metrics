@@ -16,7 +16,7 @@ MLAdjustedRandIndexTest >> setUp [
 ]
 
 { #category : #testing }
-MLAdjustedRandIndexTest >> testClusterAClusterB [
+MLAdjustedRandIndexTest >> testClusterAClusterBComputesIndex [
 
 	| index |
 	
@@ -30,10 +30,8 @@ MLAdjustedRandIndexTest >> testClusterAClusterB [
 MLAdjustedRandIndexTest >> testComputeMetric [
 
 	| instance |
+	instance := MLAdjustedRandIndex new clusterA: partitionA; clusterB: partitionB.
 	
-	instance := (MLAdjustedRandIndex new
-			clusterA: #(1 2 3 3 2 1 1 3 3 1 2 2);
-			clusterB: #(3 2 3 2 2 1 1 2 3 1 3 1)).
 	self assert: instance computeMetric equals: 0.083.
 	
 	instance clusterA: #(0 1 0 1); clusterB: #(0 0 1 1).

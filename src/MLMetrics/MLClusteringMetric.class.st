@@ -38,18 +38,18 @@ Class {
 
 { #category : #'instance creation' }
 MLClusteringMetric class >> availableMetricNames [
-	" Answer a <Collection> of receiver's names "
+	"Answer a <Collection> of receiver's names"
 	
 	^ self allSubclasses
-		reject: #isAbstract 
-		thenCollect: #names
+		reject: [:each | each isAbstract ] 
+		thenCollect: [:each | each names ]
 ]
 
 { #category : #accessing }
 MLClusteringMetric class >> names [
-	" Answer a <Collection> of receiver's names in English language "
+	"Answer a <Collection> of receiver's names in English language"
 	
-	self subclassResponsibility
+	^ self subclassResponsibility
 ]
 
 { #category : #accessing }
@@ -80,20 +80,19 @@ MLClusteringMetric >> defaultNumberOfWishedDecimal [
 
 { #category : #initialization }
 MLClusteringMetric >> initializeWithClusterA: firstCluster clusterB: secondCluster [
-	" Private - Initialize the receiver "
+	"Private - Initialize the receiver"
 
-	self assert: [ firstCluster noneSatisfy: #isNil ].
-	self assert: [ secondCluster noneSatisfy: #isNil ].
+	self assert: [ firstCluster noneSatisfy: [:each | each isNil ]].
+	self assert: [ secondCluster noneSatisfy: [:each | each isNil ]].
 	self clusterA: firstCluster.
 	self clusterB: secondCluster.
 ]
 
 { #category : #accessing }
 MLClusteringMetric >> numberOfWishedDecimal [
-	" Answer the <Number> of the wished decimal in the result "
+	"Answer the <Number> of the wished decimal in the result"
 
-	^ round
-		ifNil: [ round := self defaultNumberOfWishedDecimal ]
+	^ round ifNil: [ round := self defaultNumberOfWishedDecimal ]
 ]
 
 { #category : #accessing }

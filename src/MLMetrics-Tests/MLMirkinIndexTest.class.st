@@ -7,22 +7,14 @@ Class {
 	#category : #'MLMetrics-Tests-ClusterMeasure-RandIndex'
 }
 
-{ #category : #running }
-MLMirkinIndexTest >> setUp [ 
-
-	super setUp.
-	partitionA := #(0 1 2 5 6 8 9).
-	partitionB := #(0 2 3 4 5 7 9).
-]
-
 { #category : #testing }
 MLMirkinIndexTest >> testComputeMetric [
 
 	| instance |
 	
 	instance := MLMirkinIndex new 
-		clusterA: partitionA;
-		clusterB: partitionB.
+		clusterA: #(0 1 2 5 6 8 9);
+		clusterB: #(0 2 3 4 5 7 9).
 	self assert: instance computeMetric equals: 0.0.
 	
 	instance 
