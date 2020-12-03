@@ -19,11 +19,11 @@ MLRandIndexTest >> testBuildMatrix [
 	| actual expected |
 
 	actual := MLRandIndex new buildMatrix: partitionA.
-	expected :=  #(#(0 1 1 1 0 0 ) #(1 0 0 0 1 1 ) #(1 0 0 0 1 1 ) #(1 0 0 0 1 1 ) #(0 1 1 1 0 0 ) #(0 1 1 1 0 0 ) ).
+	expected :=  #(#(0 1 1 1 0 0 ) #(1 0 0 0 1 1 ) #(1 0 0 0 1 1 ) #(1 0 0 0 1 1 ) #(0 1 1 1 0 0 ) #(0 1 1 1 0 0 ) ) asPMVector.
 	self assert: actual equals: expected.
 
 	actual := MLRandIndex new buildMatrix: partitionB.	
-	expected := #(#(0 0 0 1 1 1 ) #(0 0 0 1 1 1 ) #(0 0 0 1 1 1 ) #(1 1 1 0 0 0 ) #(1 1 1 0 0 0 ) #(1 1 1 0 0 0 ) ).
+	expected := #(#(0 0 0 1 1 1 ) #(0 0 0 1 1 1 ) #(0 0 0 1 1 1 ) #(1 1 1 0 0 0 ) #(1 1 1 0 0 0 ) #(1 1 1 0 0 0 ) ) asPMVector.
 	self assert: actual equals: expected.
 	
 
