@@ -24,5 +24,5 @@ Metacello new
 ```
 spec 
    baseline: 'MLMetrics' 
-   with: [ spec repository: 'github://pharo-ai/MLMetrics/src' ].
+   with: [ spec repository: 'github://pharo-ai/MLMetrics:main/src' ].
 ```
