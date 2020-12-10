@@ -12,7 +12,10 @@ BaselineOfMLMetrics >> baseline: spec [
 		"Baselines"
     	spec
     		baseline: 'PolyMath'
-  	 	 	with: [ spec repository: 'github://PolyMathOrg/PolyMath:master/src' ].
+  	 	 	with: [ 
+				spec 
+					repository: 'github://PolyMathOrg/PolyMath:master/src';
+					loads: #('Core') ].
 		"Packages"
 		spec
 			package: 'MLMetrics' 			with: [ spec requires: #('PolyMath') ];
