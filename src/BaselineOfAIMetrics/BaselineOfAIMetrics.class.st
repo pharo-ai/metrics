@@ -1,11 +1,11 @@
 Class {
-	#name : #BaselineOfMLMetrics,
+	#name : #BaselineOfAIMetrics,
 	#superclass : #BaselineOf,
 	#category : #BaselineOfAIMetrics
 }
 
 { #category : #baselines }
-BaselineOfMLMetrics >> baseline: spec [
+BaselineOfAIMetrics >> baseline: spec [
 	<baseline>
 
 	spec for: #(common) do: [ 
@@ -18,7 +18,7 @@ BaselineOfMLMetrics >> baseline: spec [
 					loads: #('Core') ].
 		"Packages"
 		spec
-			package: 'MLMetrics' 			with: [ spec requires: #('PolyMath') ];
-			package: 'MLMetrics-Tests' 	with: [ spec requires: #('MLMetrics') ]
+			package: 'AIMetrics' 			with: [ spec requires: #('PolyMath') ];
+			package: 'AIMetrics-Tests' 	with: [ spec requires: #('AIMetrics') ]
 	]
 ]
