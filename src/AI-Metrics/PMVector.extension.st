@@ -15,13 +15,6 @@ PMVector >> crossTabulateWith: aPMVector [
 ]
 
 { #category : #'*AI-Metrics' }
-PMVector >> take: anInteger [ 
-	"Answer a <PMMatrix> with the receiver's binomial coefficient at each element for anInteger"
-	
-	^ self collect: [ :each | each take: anInteger ]
-]
-
-{ #category : #'*AI-Metrics' }
 PMVector >> uniqueValues [
 	
 	^ self asSet asArray

@@ -9,10 +9,3 @@ PMMatrix >> sumColumns [
 	1 to: a size do: [ :n | a at: n put: (self columnAt: n) sum ].
 	^ a
 ]
-
-{ #category : #'*AI-Metrics' }
-PMMatrix >> take: anInteger [ 
-	"Answer a <PMMatrix> with the receiver's binomial coefficient at each element for anInteger"
-	
-	^ self collect: [ :each | each take: anInteger ]
-]
