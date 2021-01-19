@@ -12,7 +12,7 @@ This package is part of the Pharo AI project: It contains implementations, tests
 
 ```smalltalk
 Metacello new
-   baseline: 'MLMetrics';
+   baseline: 'AIMetrics';
    repository: 'github://pharo-ai/metrics/src';
    load.
 ```
@@ -21,6 +21,6 @@ Metacello new
 
 ```
 spec 
-   baseline: 'MLMetrics' 
+   baseline: 'AIMetrics' 
    with: [ spec repository: 'github://pharo-ai/metrics/src' ].
 ```
