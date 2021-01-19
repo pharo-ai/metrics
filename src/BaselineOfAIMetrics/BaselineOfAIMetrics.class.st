@@ -18,7 +18,7 @@ BaselineOfAIMetrics >> baseline: spec [
 					loads: #('Core') ].
 		"Packages"
 		spec
-			package: 'AIMetrics' 			with: [ spec requires: #('PolyMath') ];
-			package: 'AIMetrics-Tests' 	with: [ spec requires: #('AIMetrics') ]
+			package: 'AI-Metrics' 			with: [ spec requires: #('PolyMath') ];
+			package: 'AI-Metrics-Tests' 	with: [ spec requires: #('AI-Metrics') ]
 	]
 ]
