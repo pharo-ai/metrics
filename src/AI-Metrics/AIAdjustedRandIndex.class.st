@@ -28,13 +28,13 @@ MLAdjustedRandIndex
 
 "
 Class {
-	#name : #MLAdjustedRandIndex,
-	#superclass : #MLRandIndex,
-	#category : #'MLMetrics-ClusterMeasure-RandIndex'
+	#name : #AIAdjustedRandIndex,
+	#superclass : #AIRandIndex,
+	#category : #'AI-Metrics-ClusterMeasure-RandIndex'
 }
 
 { #category : #accessing }
-MLAdjustedRandIndex class >> names [
+AIAdjustedRandIndex class >> names [
 	" See superimplementor's comment "
 
 	^ #(
@@ -45,7 +45,7 @@ MLAdjustedRandIndex class >> names [
 ]
 
 { #category : #accessing }
-MLAdjustedRandIndex >> computeMetric [
+AIAdjustedRandIndex >> computeMetric [
 	" Answer a <Float> with the adjusted Rand index between cluster assignments in c1 and cluster assignments in c2 "
 	
 	| ctab sumnij sumai sumbj nTwo expectedIndex maximumIndex |

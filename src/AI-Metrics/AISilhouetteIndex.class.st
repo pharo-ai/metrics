@@ -24,13 +24,13 @@ MLSilhouetteIndex
 
 "
 Class {
-	#name : #MLSilhouetteIndex,
-	#superclass : #MLClusteringMetric,
-	#category : #'MLMetrics-ClusterMeasure-RandIndex'
+	#name : #AISilhouetteIndex,
+	#superclass : #AIClusteringMetric,
+	#category : #'AI-Metrics-ClusterMeasure-RandIndex'
 }
 
 { #category : #accessing }
-MLSilhouetteIndex class >> names [
+AISilhouetteIndex class >> names [
 	" See superimplementor's comment "
 	
 	^ #(

@@ -2,13 +2,13 @@
 A MLAdjustedRandIndexTest is a test class for testing the behavior of MLAdjustedRandIndex
 "
 Class {
-	#name : #MLAdjustedRandIndexTest,
-	#superclass : #MLMetricTest,
-	#category : #'MLMetrics-Tests-ClusterMeasure-RandIndex'
+	#name : #AIAdjustedRandIndexTest,
+	#superclass : #AIMetricTest,
+	#category : #'AI-Metrics-Tests-ClusterMeasure-RandIndex'
 }
 
 { #category : #running }
-MLAdjustedRandIndexTest >> setUp [ 
+AIAdjustedRandIndexTest >> setUp [ 
 
 	super setUp.
 	partitionA := #(1 2 3 3 2 1 1 3 3 1 2 2).
@@ -16,21 +16,21 @@ MLAdjustedRandIndexTest >> setUp [
 ]
 
 { #category : #testing }
-MLAdjustedRandIndexTest >> testClusterAClusterBComputesIndex [
+AIAdjustedRandIndexTest >> testClusterAClusterBComputesIndex [
 
 	| index |
 	
-	index := (MLAdjustedRandIndex 
+	index := (AIAdjustedRandIndex 
 			clusterA: #(1 2 3 3 2 1 1 3 3 1 2 2)
 			clusterB: #(3 2 3 2 2 1 1 2 3 1 3 1)).
 	self assert: index equals: 0.083
 ]
 
 { #category : #testing }
-MLAdjustedRandIndexTest >> testComputeMetric [
+AIAdjustedRandIndexTest >> testComputeMetric [
 
 	| instance |
-	instance := MLAdjustedRandIndex new clusterA: partitionA; clusterB: partitionB.
+	instance := AIAdjustedRandIndex new clusterA: partitionA; clusterB: partitionB.
 	
 	self assert: instance computeMetric equals: 0.083.
 	

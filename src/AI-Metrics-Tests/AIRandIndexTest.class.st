@@ -1,11 +1,11 @@
 Class {
-	#name : #MLRandIndexTest,
-	#superclass : #MLMetricTest,
-	#category : #'MLMetrics-Tests-ClusterMeasure-RandIndex'
+	#name : #AIRandIndexTest,
+	#superclass : #AIMetricTest,
+	#category : #'AI-Metrics-Tests-ClusterMeasure-RandIndex'
 }
 
 { #category : #running }
-MLRandIndexTest >> setUp [
+AIRandIndexTest >> setUp [
 
 	super setUp.
 	partitionA := #( 0 1 1 1 0 0 ).
@@ -14,15 +14,15 @@ MLRandIndexTest >> setUp [
 ]
 
 { #category : #testing }
-MLRandIndexTest >> testBuildMatrix [
+AIRandIndexTest >> testBuildMatrix [
 
 	| actual expected |
 
-	actual := MLRandIndex new buildMatrix: partitionA.
+	actual := AIRandIndex new buildMatrix: partitionA.
 	expected :=  #(#(0 1 1 1 0 0 ) #(1 0 0 0 1 1 ) #(1 0 0 0 1 1 ) #(1 0 0 0 1 1 ) #(0 1 1 1 0 0 ) #(0 1 1 1 0 0 ) ) asPMVector.
 	self assert: actual equals: expected.
 
-	actual := MLRandIndex new buildMatrix: partitionB.	
+	actual := AIRandIndex new buildMatrix: partitionB.	
 	expected := #(#(0 0 0 1 1 1 ) #(0 0 0 1 1 1 ) #(0 0 0 1 1 1 ) #(1 1 1 0 0 0 ) #(1 1 1 0 0 0 ) #(1 1 1 0 0 0 ) ) asPMVector.
 	self assert: actual equals: expected.
 	
@@ -30,10 +30,10 @@ MLRandIndexTest >> testBuildMatrix [
 ]
 
 { #category : #testing }
-MLRandIndexTest >> testClusterA [
+AIRandIndexTest >> testClusterA [
 
 	| instance |
-	instance := MLRandIndex new clusterA: partitionA.
+	instance := AIRandIndex new clusterA: partitionA.
 	self assert: instance clusterA equals: #( 0 1 1 1 0 0 ).
 	instance clusterA: Array empty.
 	self assert: instance clusterA equals: Array empty.
@@ -41,20 +41,20 @@ MLRandIndexTest >> testClusterA [
 ]
 
 { #category : #testing }
-MLRandIndexTest >> testClusterAClusterB [
+AIRandIndexTest >> testClusterAClusterB [
 
 	| score |
-	score := (MLRandIndex clusterA: partitionA clusterB: partitionB).
+	score := (AIRandIndex clusterA: partitionA clusterB: partitionB).
 	self 
 		assert: (score truncateTo: 0.01)
 		equals: 0.46.
 ]
 
 { #category : #testing }
-MLRandIndexTest >> testClusterB [
+AIRandIndexTest >> testClusterB [
 
 	| instance |
-	instance := MLRandIndex new clusterB: partitionB.
+	instance := AIRandIndex new clusterB: partitionB.
 	self assert: instance clusterB equals: #( 1 1 1 0 0 0).
 	instance clusterB: Array empty.
 	self assert: instance clusterB equals: Array empty.
@@ -62,11 +62,11 @@ MLRandIndexTest >> testClusterB [
 ]
 
 { #category : #testing }
-MLRandIndexTest >> testComputeMetric [
+AIRandIndexTest >> testComputeMetric [
 
 	| instance |
 	
-	instance := (MLRandIndex new clusterA: partitionA; clusterB: partitionB).
+	instance := (AIRandIndex new clusterA: partitionA; clusterB: partitionB).
 	self 
 		assert: instance computeMetric
 		equals: 0.467.
@@ -83,17 +83,17 @@ MLRandIndexTest >> testComputeMetric [
 ]
 
 { #category : #testing }
-MLRandIndexTest >> testDefaultNumberOfWishedDecimal [
+AIRandIndexTest >> testDefaultNumberOfWishedDecimal [
 
-	self assert: (MLRandIndex new defaultNumberOfWishedDecimal isKindOf: Number)
+	self assert: (AIRandIndex new defaultNumberOfWishedDecimal isKindOf: Number)
 ]
 
 { #category : #testing }
-MLRandIndexTest >> testNumberOfWishedDecimal [
+AIRandIndexTest >> testNumberOfWishedDecimal [
 
 	| instance |
 	
-	instance := MLRandIndex new.
+	instance := AIRandIndex new.
 	self assert: (instance numberOfWishedDecimal isKindOf: Number).
 	instance numberOfWishedDecimal: 5.
 	self assert: instance numberOfWishedDecimal equals: 5.

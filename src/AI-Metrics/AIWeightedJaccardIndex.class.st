@@ -11,13 +11,13 @@ MLWeightedJaccardIndex
 
 "
 Class {
-	#name : #MLWeightedJaccardIndex,
-	#superclass : #MLRandIndex,
-	#category : #'MLMetrics-ClusterMeasure-RandIndex'
+	#name : #AIWeightedJaccardIndex,
+	#superclass : #AIRandIndex,
+	#category : #'AI-Metrics-ClusterMeasure-RandIndex'
 }
 
 { #category : #accessing }
-MLWeightedJaccardIndex class >> names [
+AIWeightedJaccardIndex class >> names [
 	" See superimplementor's comment "
 	
 	^ #(
@@ -26,7 +26,7 @@ MLWeightedJaccardIndex class >> names [
 ]
 
 { #category : #accessing }
-MLWeightedJaccardIndex >> computeMetric [
+AIWeightedJaccardIndex >> computeMetric [
 	"Answer a <Float> with the weighted Jaccard index between the receiver's cluster assignments in clusterA and clusterB"
 	
 	| minCol features |

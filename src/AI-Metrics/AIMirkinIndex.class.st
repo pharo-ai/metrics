@@ -12,13 +12,13 @@ MLMirkinIndex
 ```
 "
 Class {
-	#name : #MLMirkinIndex,
-	#superclass : #MLRandIndex,
-	#category : #'MLMetrics-ClusterMeasure-RandIndex'
+	#name : #AIMirkinIndex,
+	#superclass : #AIRandIndex,
+	#category : #'AI-Metrics-ClusterMeasure-RandIndex'
 }
 
 { #category : #accessing }
-MLMirkinIndex class >> names [
+AIMirkinIndex class >> names [
 	" See superimplementor's comment "
 	
 	^ #(
@@ -28,7 +28,7 @@ MLMirkinIndex class >> names [
 ]
 
 { #category : #accessing }
-MLMirkinIndex >> computeMetric [
+AIMirkinIndex >> computeMetric [
 	"Answer a <Float> representing the Mirkin index between the receiver's cluster assignments in clusterA and clusterB"
 	
 	| ctab tp tp_plus_fp tp_plus_fn fp fn |

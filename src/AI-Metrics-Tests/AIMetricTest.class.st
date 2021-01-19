@@ -1,9 +1,9 @@
 Class {
-	#name : #MLMetricTest,
+	#name : #AIMetricTest,
 	#superclass : #TestCase,
 	#instVars : [
 		'partitionA',
 		'partitionB'
 	],
-	#category : #'MLMetrics-Tests-ClusterMeasure-RandIndex'
+	#category : #'AI-Metrics-Tests-ClusterMeasure-RandIndex'
 }

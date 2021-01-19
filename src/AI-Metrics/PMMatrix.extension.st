@@ -1,6 +1,6 @@
 Extension { #name : #PMMatrix }
 
-{ #category : #'*MLMetrics' }
+{ #category : #'*AI-Metrics' }
 PMMatrix >> sumColumns [
 	" Answer an <PMVector> with the sum of all the receiver's columns "
 
@@ -10,7 +10,7 @@ PMMatrix >> sumColumns [
 	^ a
 ]
 
-{ #category : #'*MLMetrics' }
+{ #category : #'*AI-Metrics' }
 PMMatrix >> take: anInteger [ 
 	"Answer a <PMMatrix> with the receiver's binomial coefficient at each element for anInteger"
 	

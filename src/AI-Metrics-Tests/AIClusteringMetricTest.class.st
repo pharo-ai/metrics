@@ -2,16 +2,16 @@
 A MLClusteringMetricTest is a test class for testing the behavior of MLClusteringMetric
 "
 Class {
-	#name : #MLClusteringMetricTest,
+	#name : #AIClusteringMetricTest,
 	#superclass : #TestCase,
-	#category : #'MLMetrics-Tests-ClusterMeasure-Core'
+	#category : #'AI-Metrics-Tests-ClusterMeasure-Core'
 }
 
 { #category : #tests }
-MLClusteringMetricTest >> testAvailableMetricNames [
+AIClusteringMetricTest >> testAvailableMetricNames [
 
 	| metrics |
-	metrics := MLClusteringMetric availableMetricNames.
+	metrics := AIClusteringMetric availableMetricNames.
 	self deny: metrics isEmpty.
 	self assert: (metrics allSatisfy: [:each | each notEmpty]).
 	self assert: (metrics flattened allSatisfy: [ :metric | metric isKindOf: String ])

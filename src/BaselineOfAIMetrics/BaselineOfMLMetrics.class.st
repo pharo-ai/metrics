@@ -1,7 +1,7 @@
 Class {
 	#name : #BaselineOfMLMetrics,
 	#superclass : #BaselineOf,
-	#category : #BaselineOfMLMetrics
+	#category : #BaselineOfAIMetrics
 }
 
 { #category : #baselines }

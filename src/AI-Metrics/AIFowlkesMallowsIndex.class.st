@@ -18,13 +18,13 @@ MLFowlkesMallowsIndex
 
 "
 Class {
-	#name : #MLFowlkesMallowsIndex,
-	#superclass : #MLRandIndex,
-	#category : #'MLMetrics-ClusterMeasure-RandIndex'
+	#name : #AIFowlkesMallowsIndex,
+	#superclass : #AIRandIndex,
+	#category : #'AI-Metrics-ClusterMeasure-RandIndex'
 }
 
 { #category : #accessing }
-MLFowlkesMallowsIndex class >> names [
+AIFowlkesMallowsIndex class >> names [
 	" See superimplementor's comment "
 
 	^ #(
@@ -37,7 +37,7 @@ MLFowlkesMallowsIndex class >> names [
 ]
 
 { #category : #accessing }
-MLFowlkesMallowsIndex >> computeMetric [
+AIFowlkesMallowsIndex >> computeMetric [
 	"Answer a <Float> with the Fowlkes-Mallows index between the receiver's cluster assignments in clusterA and clusterB"
 	
 	| ctab tp tp_plus_fp tp_plus_fn fp fn |

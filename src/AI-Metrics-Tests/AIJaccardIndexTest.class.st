@@ -2,17 +2,17 @@
 A MLJaccardIndexTest is a test class for testing the behavior of MLJaccardIndex
 "
 Class {
-	#name : #MLJaccardIndexTest,
-	#superclass : #MLMetricTest,
-	#category : #'MLMetrics-Tests-ClusterMeasure-RandIndex'
+	#name : #AIJaccardIndexTest,
+	#superclass : #AIMetricTest,
+	#category : #'AI-Metrics-Tests-ClusterMeasure-RandIndex'
 }
 
 { #category : #testing }
-MLJaccardIndexTest >> testComputeMetric [
+AIJaccardIndexTest >> testComputeMetric [
 
 	| instance |
 	
-	instance := MLJaccardIndex new 
+	instance := AIJaccardIndex new 
 		clusterA: #(0 1 2 5 6 8 9);
 		clusterB: #(0 2 3 4 5 7 9).
 	self assert: instance computeMetric equals: 0.4.

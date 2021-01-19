@@ -27,13 +27,13 @@ MLJaccardIndex
 
 "
 Class {
-	#name : #MLJaccardIndex,
-	#superclass : #MLClusteringMetric,
-	#category : #'MLMetrics-ClusterMeasure-RandIndex'
+	#name : #AIJaccardIndex,
+	#superclass : #AIClusteringMetric,
+	#category : #'AI-Metrics-ClusterMeasure-RandIndex'
 }
 
 { #category : #accessing }
-MLJaccardIndex class >> names [
+AIJaccardIndex class >> names [
 	" See superimplementor's comment "
 	
 	^ #(
@@ -45,7 +45,7 @@ MLJaccardIndex class >> names [
 ]
 
 { #category : #accessing }
-MLJaccardIndex >> computeMetric [
+AIJaccardIndex >> computeMetric [
 	" Answer a <Float> with the Jaccard index between the receiver's cluster assignments in clusterA and clusterB "
 
 	^ (self clusterA isEmpty and: [ self clusterB isEmpty ])

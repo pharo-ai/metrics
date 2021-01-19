@@ -26,18 +26,18 @@ Instance Variables
 
 "
 Class {
-	#name : #MLClusteringMetric,
+	#name : #AIClusteringMetric,
 	#superclass : #Object,
 	#instVars : [
 		'clusterA',
 		'clusterB',
 		'round'
 	],
-	#category : #'MLMetrics-ClusterMeasure-Core'
+	#category : #'AI-Metrics-ClusterMeasure-Core'
 }
 
 { #category : #'instance creation' }
-MLClusteringMetric class >> availableMetricNames [
+AIClusteringMetric class >> availableMetricNames [
 	"Answer a <Collection> of receiver's names"
 	
 	^ self allSubclasses
@@ -46,40 +46,40 @@ MLClusteringMetric class >> availableMetricNames [
 ]
 
 { #category : #accessing }
-MLClusteringMetric class >> names [
+AIClusteringMetric class >> names [
 	"Answer a <Collection> of receiver's names in English language"
 	
 	^ self subclassResponsibility
 ]
 
 { #category : #accessing }
-MLClusteringMetric >> clusterA [
+AIClusteringMetric >> clusterA [
 	^ clusterA
 ]
 
 { #category : #accessing }
-MLClusteringMetric >> clusterA: anObject [
+AIClusteringMetric >> clusterA: anObject [
 	clusterA := anObject
 ]
 
 { #category : #accessing }
-MLClusteringMetric >> clusterB [
+AIClusteringMetric >> clusterB [
 	^ clusterB
 ]
 
 { #category : #accessing }
-MLClusteringMetric >> clusterB: anObject [
+AIClusteringMetric >> clusterB: anObject [
 	clusterB := anObject
 ]
 
 { #category : #accessing }
-MLClusteringMetric >> defaultNumberOfWishedDecimal [
+AIClusteringMetric >> defaultNumberOfWishedDecimal [
 
 	^ 3
 ]
 
 { #category : #initialization }
-MLClusteringMetric >> initializeWithClusterA: firstCluster clusterB: secondCluster [
+AIClusteringMetric >> initializeWithClusterA: firstCluster clusterB: secondCluster [
 	"Private - Initialize the receiver"
 
 	self assert: [ firstCluster noneSatisfy: [:each | each isNil ]].
@@ -89,14 +89,14 @@ MLClusteringMetric >> initializeWithClusterA: firstCluster clusterB: secondClust
 ]
 
 { #category : #accessing }
-MLClusteringMetric >> numberOfWishedDecimal [
+AIClusteringMetric >> numberOfWishedDecimal [
 	"Answer the <Number> of the wished decimal in the result"
 
 	^ round ifNil: [ round := self defaultNumberOfWishedDecimal ]
 ]
 
 { #category : #accessing }
-MLClusteringMetric >> numberOfWishedDecimal: anInteger [
+AIClusteringMetric >> numberOfWishedDecimal: anInteger [
 
 	round := anInteger
 ]

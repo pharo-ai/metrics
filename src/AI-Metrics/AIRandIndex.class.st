@@ -46,13 +46,13 @@ Subclasses inherits a few helper methods and a very basic protocol. Essentially,
 
 "
 Class {
-	#name : #MLRandIndex,
-	#superclass : #MLClusteringMetric,
-	#category : #'MLMetrics-ClusterMeasure-RandIndex'
+	#name : #AIRandIndex,
+	#superclass : #AIClusteringMetric,
+	#category : #'AI-Metrics-ClusterMeasure-RandIndex'
 }
 
 { #category : #'instance creation' }
-MLRandIndex class >> clusterA: firstCluster clusterB: secondCluster [
+AIRandIndex class >> clusterA: firstCluster clusterB: secondCluster [
 
 	^ self new
 		initializeWithClusterA: firstCluster clusterB: secondCluster;
@@ -62,7 +62,7 @@ MLRandIndex class >> clusterA: firstCluster clusterB: secondCluster [
 ]
 
 { #category : #accessing }
-MLRandIndex class >> names [
+AIRandIndex class >> names [
 	" See superimplementor's comment "
 	
 	^ #(
@@ -74,7 +74,7 @@ MLRandIndex class >> names [
 ]
 
 { #category : #accessing }
-MLRandIndex >> buildMatrix: aCollection [
+AIRandIndex >> buildMatrix: aCollection [
 	"Answer a <Collection> of points that are in the same vs different groups.
 	Different groups are 1, same groups are 0"
 
@@ -84,7 +84,7 @@ MLRandIndex >> buildMatrix: aCollection [
 ]
 
 { #category : #accessing }
-MLRandIndex >> computeMetric [
+AIRandIndex >> computeMetric [
 	"Answer a <Float> with the Rand index between cluster assignments in c1 and cluster assignments in c2"
 	
 	| x y sg binCoeff |
@@ -98,7 +98,7 @@ MLRandIndex >> computeMetric [
 ]
 
 { #category : #initialization }
-MLRandIndex >> initializeWithClusterA: firstCluster clusterB: secondCluster [
+AIRandIndex >> initializeWithClusterA: firstCluster clusterB: secondCluster [
 	"Private - Initialize the receiver"
 
 	self assert: [ firstCluster size = secondCluster size ].

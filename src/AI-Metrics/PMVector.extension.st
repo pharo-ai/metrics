@@ -1,6 +1,6 @@
 Extension { #name : #PMVector }
 
-{ #category : #'*MLMetrics' }
+{ #category : #'*AI-Metrics' }
 PMVector >> crossTabulateWith: aPMVector [ 
 
 	^ PMMatrix rows: (self uniqueValues collect: [ :each1 |
@@ -14,14 +14,14 @@ PMVector >> crossTabulateWith: aPMVector [
 
 ]
 
-{ #category : #'*MLMetrics' }
+{ #category : #'*AI-Metrics' }
 PMVector >> take: anInteger [ 
 	"Answer a <PMMatrix> with the receiver's binomial coefficient at each element for anInteger"
 	
 	^ self collect: [ :each | each take: anInteger ]
 ]
 
-{ #category : #'*MLMetrics' }
+{ #category : #'*AI-Metrics' }
 PMVector >> uniqueValues [
 	
 	^ self asSet asArray

@@ -2,7 +2,7 @@
 I store metadata for this package. These meta data are used by other tools such as the SmalllintManifestChecker and the critics Browser
 "
 Class {
-	#name : #ManifestMLMetricsTests,
+	#name : #ManifestMLMetrics,
 	#superclass : #PackageManifest,
-	#category : #'MLMetrics-Tests-Manifest'
+	#category : #'AI-Metrics-Manifest'
 }

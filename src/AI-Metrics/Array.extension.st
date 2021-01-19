@@ -1,6 +1,6 @@
 Extension { #name : #Array }
 
-{ #category : #'*MLMetrics' }
+{ #category : #'*AI-Metrics' }
 Array >> sumMatrix [
 	"Answer an <Integer> with the sum of all the receiver's vectors"
 
