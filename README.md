@@ -19,7 +19,7 @@ Metacello new
 
 ## If you want to depend on it
 
-```
+```smalltalk
 spec 
    baseline: 'AIMetrics' 
    with: [ spec repository: 'github://pharo-ai/metrics/src' ].
