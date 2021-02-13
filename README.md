@@ -1,4 +1,4 @@
-# MLMetrics
+# Metrics
 
 This package is part of the Pharo AI project: It contains implementations, tests and documentation of Machine Learning metrics for Pharo.
 
@@ -24,3 +24,19 @@ spec
    baseline: 'AIMetrics' 
    with: [ spec repository: 'github://pharo-ai/metrics/src' ].
 ```
+
+## Usage
+
+This library contains two major types of metrics used in Machine Learning:
+
+  - Evaluation metrics assess how a trained model has performed.
+  - Distance metrics, used to asses relationships between dataset elements.
+
+### Evaluation metrics
+
+
+### Distance metrics
+
+
+
+ 
