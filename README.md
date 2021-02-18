@@ -2,8 +2,8 @@
 
 This package is part of the Pharo AI project: It contains implementations, tests and documentation of Machine Learning metrics for Pharo.
 
-![https://github.com/pharo-ai/MLMetrics/workflows/test/badge.svg](https://github.com/pharo-ai/MLMetrics/workflows/test/badge.svg)
-[![Coverage Status](https://coveralls.io/repos/github//pharo-ai/MLMetrics/badge.svg?branch=main)](https://coveralls.io/github/pharo-ai/MLMetrics?branch=main)
+![https://github.com/pharo-ai/metrics/workflows/test/badge.svg](https://github.com/pharo-ai/MLMetrics/workflows/test/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github//pharo-ai/metrics/badge.svg?branch=main)](https://coveralls.io/github/pharo-ai/MLMetrics?branch=main)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 [![Pharo version](https://img.shields.io/badge/Pharo-8.0-%23aac9ff.svg)](https://pharo.org/download)
 
