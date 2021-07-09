@@ -1,7 +1,6 @@
 # Metrics
 
-This package is part of the Pharo AI project: It contains implementations, tests and documentation of Machine Learning metrics for Pharo. 
-These are evaluation metrics to assess how a trained Machine Learning model has performed.
+This package is part of the Pharo AI project: It contains implementations, tests and documentation of Machine Learning metrics for Pharo. These are evaluation metrics to assess how a trained Machine Learning model has performed.
 
 ![Build status](https://github.com/pharo-ai/metrics/workflows/CI/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/pharo-ai/metrics/badge.svg?branch=master)](https://coveralls.io/github/pharo-ai/metrics?branch=master)
@@ -12,10 +11,11 @@ These are evaluation metrics to assess how a trained Machine Learning model has 
 ## Loading
 
 ```smalltalk
-Metacello new
-   baseline: 'AIMetrics';
-   repository: 'github://pharo-ai/metrics/src';
-   load.
+EpMonitor disableDuring: [ 
+   Metacello new
+      baseline: 'AIMetrics';
+      repository: 'github://pharo-ai/metrics/src';
+      load ]
 ```
 
 ## If you want to depend on it

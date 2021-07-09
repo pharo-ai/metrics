@@ -8,10 +8,7 @@ SmalltalkCISpec {
   ],
   #testing : {
     #coverage : {
-      #packages : [ 'AIMetrics*' ]
-    },
-    #include : {  
-       #packages : [ 'AIMetrics-Tests*' ]
+      #packages : [ 'AI-Metrics*' ]
     }
   }
 }
