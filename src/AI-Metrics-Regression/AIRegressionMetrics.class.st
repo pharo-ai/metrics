@@ -8,25 +8,11 @@ Class {
 }
 
 { #category : #api }
-AIRegressionMetrics class >> coefficientOfDeterminationActual: actualValues expected: expectedValues [
-
-	" 1 - (Σ (actual - expeted) squared) / (Σ (actual - mean) "
-	"mean = (1/n) * Σ actual"
-	
-	| meanSquaredError meanOfObservedData squaredSumOfActual r2Coefficient |
-	meanSquaredError := self squaredErrorSumActual:  actualValues expected: expectedValues.
-	meanOfObservedData := actualValues average.
-	squaredSumOfActual := actualValues
-		inject: 0
-		into: [ :sum :actual | sum + (actual - meanOfObservedData) squared ].
-	
-	r2Coefficient := 1 - (meanSquaredError / squaredSumOfActual).
-	^ r2Coefficient
-]
-
-{ #category : #api }
 AIRegressionMetrics class >> meanAbsoluteErrorActual: actualValues expected: expectedValues [
 
+	"The mean_absolute_error function computes mean absolute error, a risk metric corresponding to the expected value of the absolute error loss or -norm loss.
+	Source: https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error"
+	
 	"(1/n) * Σ (actual - expected) absoluteValue "
 
 	| sum |
@@ -40,6 +26,9 @@ AIRegressionMetrics class >> meanAbsoluteErrorActual: actualValues expected: exp
 { #category : #api }
 AIRegressionMetrics class >> meanSquaredErrorActual: actualValues expected: expectedValues [
 
+	"The mean_squared_error function computes mean square error, a risk metric corresponding to the expected value of the squared (quadratic) error or loss.
+	Source: https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error"
+	
 	"(1/n) * Σ (actual - expected)^2 "
 
 	| sum |
@@ -48,41 +37,30 @@ AIRegressionMetrics class >> meanSquaredErrorActual: actualValues expected: expe
 ]
 
 { #category : #api }
-AIRegressionMetrics class >> multidimensionalMeanAbsoluteErrorActual: actualValues expected: expectedValues [
-
-	"(1/n) * Σ (actual - expected) absoluteValue "
-
-	| vectorialSum |
-	vectorialSum := (1 to: actualValues size) sum: [ :i | 
-		((actualValues at: i) - (expectedValues at: i)) abs ].
-
-	^ (vectorialSum / actualValues size) average
-]
-
-{ #category : #api }
-AIRegressionMetrics class >> multidimensionalMeanSquaredErrorActual: actualValues expected: expectedValues [
-
-	"(1/n) * Σ (actual - expected)^2 "
-
-	| sum |
-	sum := self  multidimensionalSquaredErrorSumActual: actualValues expected: expectedValues.
-	^ (sum / actualValues size) average
-]
-
-{ #category : #running }
-AIRegressionMetrics class >> multidimensionalSquaredErrorSumActual: actualValues expected: expectedValues [
-
-	| vectorialSum |
-	vectorialSum := (1 to: actualValues size) sum: [ :i | 
-		((actualValues at: i) - (expectedValues at: i)) squared ].
-	
-	^ vectorialSum
-]
-
-{ #category : #api }
 AIRegressionMetrics class >> r2CoefficientActual: actualValues expected: expectedValues [
 
-	^ self coefficientOfDeterminationActual: actualValues expected: expectedValues
+	"The r2_score function computes the coefficient of determination, usually denoted as R².
+
+	It represents the proportion of variance (of y) that has been explained by the independent variables in the model.
+	It provides an indication of goodness of fit and therefore a measure of how well unseen samples are likely to be predicted by the model, through the proportion of explained variance.
+
+	As such variance is dataset dependent, R² may not be meaningfully comparable across different datasets.
+	Best possible score is 1.0 and it can be negative (because the model can be arbitrarily worse).
+	A constant model that always predicts the expected value of y, disregarding the input features, would get a R² score of 0.0.
+	Source: https://scikit-learn.org/stable/modules/model_evaluation.html#mean-squared-error"
+	
+	"R2 = 1 - (Σ (actual - expeted) squared) / (Σ (actual - mean) "
+	"mean = (1/n) * Σ actual"
+	
+	| meanSquaredError meanOfObservedData squaredSumOfActual r2Coefficient |
+	meanSquaredError := self squaredErrorSumActual:  actualValues expected: expectedValues.
+	meanOfObservedData := actualValues average.
+	squaredSumOfActual := actualValues
+		inject: 0
+		into: [ :sum :actual | sum + (actual - meanOfObservedData) squared ].
+	
+	r2Coefficient := 1 - (meanSquaredError / squaredSumOfActual).
+	^ r2Coefficient
 ]
 
 { #category : #running }

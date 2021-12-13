@@ -18,17 +18,6 @@ AIRegressionMetricsTest >> setUp [
 ]
 
 { #category : #tests }
-AIRegressionMetricsTest >> testCoefficientOfDeterminationActualExpected [
-
-	| yTrue yPredicted |
-	yTrue := #( 3 -0.5 2 7 ).
-	yPredicted := #( 2.5 0.0 2 8 ).
-	self
-		assert: (regressionMetrics coefficientOfDeterminationActual: yTrue expected: yPredicted)
-		equals: 0.9486081370449679
-]
-
-{ #category : #tests }
 AIRegressionMetricsTest >> testMeanAbsoluteErrorActualExpected [
 
 	| yTrue yPredicted |
@@ -51,23 +40,12 @@ AIRegressionMetricsTest >> testMeanSquaredErrorActualExpected [
 ]
 
 { #category : #tests }
-AIRegressionMetricsTest >> testMultidimensionalMeanAbsoluteErrorActualExpected [
+AIRegressionMetricsTest >> testR2CoefficientActualExpected [
 
 	| yTrue yPredicted |
-	yTrue := #( #(0.5 1) #(-1 1) #(7 -6) ).
-	yPredicted := #( #(0 2) #(-1 2) #(8 -5) ).
+	yTrue := #( 3 -0.5 2 7 ).
+	yPredicted := #( 2.5 0.0 2 8 ).
 	self
-		assert: (regressionMetrics multidimensionalMeanAbsoluteErrorActual: yTrue expected: yPredicted)
-		equals: 0.75
-]
-
-{ #category : #tests }
-AIRegressionMetricsTest >> testMultidimensionalMeanSquaredErrorActualExpected [
-
-	| yTrue yPredicted |
-	yTrue := #( #(0.5 1) #(-1 1) #(7 -6) ).
-	yPredicted := #( #(0 2) #(-1 2) #(8 -5) ).
-	self
-		assert: (regressionMetrics multidimensionalMeanSquaredErrorActual: yTrue expected: yPredicted)
-		equals: 0.7083333333333334
+		assert: (regressionMetrics r2CoefficientActual: yTrue expected: yPredicted)
+		equals: 0.9486081370449679
 ]
