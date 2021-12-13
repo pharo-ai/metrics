@@ -1,5 +1,6 @@
 "
-I am a class that allows to evalute the performance of a regression model (linear, logistic regression, etc). See my tests for case usages
+I am a class that allows to evalute the performance of a regression model (linear, logistic regression, etc).
+I provide several differen metrics for testing a regression model. See the methods on the class side. Each method has a comment. See my tests to see how to use me.
 "
 Class {
 	#name : #AIRegressionMetrics,
