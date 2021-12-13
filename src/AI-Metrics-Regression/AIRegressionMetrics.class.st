@@ -8,7 +8,7 @@ Class {
 }
 
 { #category : #api }
-AIRegressionMetrics class >> maxErrorActual: actualValues expected: expectedValues [
+AIRegressionMetrics class >> maxErrorActual: actualValues predicted: predictedValues [
 
 	"The max_error function computes the maximum residual error , a metric that captures the worst case error between the predicted value and the true value.
 	In a perfectly fitted single output regression model, max_error would be 0 on the training set and though this would be highly unlikely in the real world,
@@ -18,16 +18,16 @@ AIRegressionMetrics class >> maxErrorActual: actualValues expected: expectedValu
 	"maxError = max(| true - predicted |)"
 
 	| maxError |
-	maxError := (actualValues first - expectedValues first) abs.
-	expectedValues with: actualValues do: [ :expected :actual | 
+	maxError := (actualValues first - predictedValues first) abs.
+	actualValues with: predictedValues do: [ :actual :predicted | 
 		| difference |
-		difference := (actual - expected) abs.
+		difference := (actual - predicted) abs.
 		maxError := maxError max: difference ].
 	^ maxError
 ]
 
 { #category : #api }
-AIRegressionMetrics class >> meanAbsoluteErrorActual: actualValues expected: expectedValues [
+AIRegressionMetrics class >> meanAbsoluteErrorActual: actualValues predicted: predictedValues [
 
 	"The mean_absolute_error function computes mean absolute error, a risk metric corresponding to the expected value of the absolute error loss or -norm loss.
 	Source: https://scikit-learn.org/stable/modules/model_evaluation.html"
@@ -37,13 +37,13 @@ AIRegressionMetrics class >> meanAbsoluteErrorActual: actualValues expected: exp
 	| sum |
 	sum := 0.
 	actualValues
-		with: expectedValues
-		do: [ :actual :expected | sum := sum + (actual - expected) abs ].
+		with: predictedValues
+		do: [ :actual :predicted | sum := sum + (actual - predicted) abs ].
 	^ sum / actualValues size
 ]
 
 { #category : #api }
-AIRegressionMetrics class >> meanSquaredErrorActual: actualValues expected: expectedValues [
+AIRegressionMetrics class >> meanSquaredErrorActual: actualValues predicted: predictedValues [
 
 	"The mean_squared_error function computes mean square error, a risk metric corresponding to the expected value of the squared (quadratic) error or loss.
 	Source: https://scikit-learn.org/stable/modules/model_evaluation.html"
@@ -51,23 +51,29 @@ AIRegressionMetrics class >> meanSquaredErrorActual: actualValues expected: expe
 	"(1/n) * Σ (true - predicted)^2 "
 
 	| sum |
-	sum := self squaredErrorSumActual: actualValues expected: expectedValues.
+	sum := self squaredErrorSumActual: actualValues predicted: predictedValues.
 	^ sum / actualValues size
 ]
 
 { #category : #api }
-AIRegressionMetrics class >> meanSquaredLogarithmicErrorActual: actualValues expected: expectedValues [
+AIRegressionMetrics class >> meanSquaredLogarithmicErrorActual: actualValues predicted: predictedValues [
 
 	"The mean_squared_log_error function computes a risk metric corresponding to the expected value of the squared logarithmic (quadratic) error or loss.
 	Source: https://scikit-learn.org/stable/modules/model_evaluation.html"
-	
+
 	"MSLE = (1/n) * Σ ln(1+ true) - ln(1 + predicted) "
 
-	actualValues with: expectedValues
+	| sum |
+	sum := 0.
+	actualValues
+		with: predictedValues
+		do: [ :actual :predicted | 
+			sum := sum + ((1 + actual) ln - (1 + predicted) ln) squared ].
+	^ sum / actualValues size
 ]
 
 { #category : #api }
-AIRegressionMetrics class >> r2CoefficientActual: actualValues expected: expectedValues [
+AIRegressionMetrics class >> r2CoefficientActual: actualValues predicted: predictedValues [
 
 	"The r2_score function computes the coefficient of determination, usually denoted as R².
 
@@ -83,7 +89,7 @@ AIRegressionMetrics class >> r2CoefficientActual: actualValues expected: expecte
 	"mean = (1/n) * Σ actual"
 	
 	| meanSquaredError meanOfObservedData squaredSumOfActual r2Coefficient |
-	meanSquaredError := self squaredErrorSumActual:  actualValues expected: expectedValues.
+	meanSquaredError := self squaredErrorSumActual:  actualValues predicted: predictedValues.
 	meanOfObservedData := actualValues average.
 	squaredSumOfActual := actualValues
 		inject: 0
@@ -93,13 +99,19 @@ AIRegressionMetrics class >> r2CoefficientActual: actualValues expected: expecte
 	^ r2Coefficient
 ]
 
+{ #category : #api }
+AIRegressionMetrics class >> rootMeanSquaredErrorActual: actualValues predicted: predictedValues [
+
+	^ (self meanSquaredErrorActual: actualValues predicted: predictedValues) sqrt
+]
+
 { #category : #running }
-AIRegressionMetrics class >> squaredErrorSumActual: actualValues expected: expectedValues [
+AIRegressionMetrics class >> squaredErrorSumActual: actualValues predicted: predictedValues [
 
 	| sum |
 	sum := 0.
 	actualValues
-		with: expectedValues
-		do: [ :actual :expected | sum := sum + (actual - expected) squared ].
+		with: predictedValues
+		do: [ :actual :predicted | sum := sum + (actual - predicted) squared ].
 	^ sum 
 ]
