@@ -18,6 +18,17 @@ AIRegressionMetricsTest >> setUp [
 ]
 
 { #category : #tests }
+AIRegressionMetricsTest >> testMaxErrorActualExpected [
+
+	| yTrue yPredicted |
+	yTrue := #( 3 2 7 1 ).
+	yPredicted := #( 9 2 7 1 ).
+	self
+		assert: (regressionMetrics maxErrorActual: yTrue expected: yPredicted)
+		equals: 6
+]
+
+{ #category : #tests }
 AIRegressionMetricsTest >> testMeanAbsoluteErrorActualExpected [
 
 	| yTrue yPredicted |
