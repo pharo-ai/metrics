@@ -53,7 +53,7 @@ AIAdjustedRandIndex >> computeMetric [
 	sumnij := (ctab take: 2) sum sum.
 	sumai := (ctab sum take: 2) sum.
 	sumbj := (ctab sumColumns take: 2) sum.
-	nTwo := self clusterA size take: 2.
+	nTwo := self clusterA size numberOfCombinationsTaken: 2.
 	expectedIndex := (sumai * sumbj) / nTwo.
 	maximumIndex := 0.5 * (sumai + sumbj).
 	^ (expectedIndex = maximumIndex and: [ sumnij ~= 0 ])
