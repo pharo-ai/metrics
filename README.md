@@ -1,6 +1,6 @@
-# Metrics
+# Metrics for Machine Learning models
 
-This package is part of the Pharo AI project: It contains implementations, tests and documentation of different metrics for Machine Learning models. These are evaluation metrics to assess how a trained Machine Learning model has performed.
+This package is part of the Pharo AI project: It contains implementations, tests and documentation of different metrics for Machine Learning models. The evaluation metrics allows to assess how a trained Machine Learning model has performed.
 
 ![Build status](https://github.com/pharo-ai/metrics/workflows/CI/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/pharo-ai/metrics/badge.svg?branch=master)](https://coveralls.io/github/pharo-ai/metrics?branch=master)
@@ -32,6 +32,15 @@ spec
 ```
 
 ## [Clustering metrics](#clustering-metrics)
+
+- Jaccard Index (`AIJaccardIndex`)
+- Rand Index (`AIRandIndex`)
+- Silhouette Index (`AISilhouetteIndex`)
+- Adjusted Rand Index (`AIAdjustedRandIndex`)
+- Fowlkes Mallows Index (`AIFowlkesMallowsIndex`)
+- Mirkin Index (`AIMirkinIndex`)
+- Weighted Jaccard Index (`AIWeightedJaccardIndex`)
+
 
 ## [Regression metrics](#regression-metrics)
 
