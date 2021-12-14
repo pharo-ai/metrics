@@ -1,3 +1,6 @@
+"
+I am the baseline of the project
+"
 Class {
 	#name : #BaselineOfAIMetrics,
 	#superclass : #BaselineOf,
