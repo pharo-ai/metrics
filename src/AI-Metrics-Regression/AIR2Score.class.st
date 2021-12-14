@@ -1,5 +1,5 @@
 "
-The r2_score function computes the coefficient of determination, usually denoted as R².
+The r2 score is the coefficient of determination, usually denoted as R².
 
 It represents the proportion of variance (of y) that has been explained by the independent variables in the model.
 It provides an indication of goodness of fit and therefore a measure of how well unseen samples are likely to be predicted by the model, through the proportion of explained variance.
