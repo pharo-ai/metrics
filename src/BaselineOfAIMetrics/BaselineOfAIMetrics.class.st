@@ -22,9 +22,11 @@ BaselineOfAIMetrics >> baseline: spec [
 		"Packages"
 		spec
 			package: 'AI-Metrics' with: [ spec requires: #('PolyMath') ];
+			package: 'AI-Metrics-Tests' with: [ spec requires: #('AI-Metrics') ];
 			package: 'AI-Metrics-Regression';
 			package: 'AI-Metrics-Regression-Tests' with: [ spec requires: #('AI-Metrics-Regression') ];
-			package: 'AI-Metrics-Tests' with: [ spec requires: #('AI-Metrics') ]
+			package: 'AI-Metrics-Classification';
+			package: 'AI-Metrics-Classification-Tests' with: [ spec requires: #('AI-Metrics-Classification') ]
 	].
 
 	self defineGroups: spec
@@ -34,10 +36,14 @@ BaselineOfAIMetrics >> baseline: spec [
 BaselineOfAIMetrics >> defineGroups: spec [
 
 	spec
-		group: 'Core' with: #( 'AI-Metrics' 'AI-Metrics-Regression');
-		group: 'Tests' with: #( 'AI-Metrics' 'AI-Metrics-Tests' 'AI-Metrics-Regression' 'AI-Metrics-Regression-Tests' ).
+		group: 'Core' with: #( 'AI-Metrics' 'AI-Metrics-Regression' 'AI-Metrics-Classification' );
+		group: 'Tests' with: #( 'AI-Metrics' 'AI-Metrics-Tests' 'AI-Metrics-Regression' 'AI-Metrics-Regression-Tests'  'AI-Metrics-Classification-Tests' ).
+		
 	spec
 		group: 'Regression'
 		with: #( 'AI-Metrics-Regression' ).
+	spec
+		group: 'Classification'
+		with: #( 'AI-Metrics-Classification' ).
 	spec group: 'default' with: #( 'Core' 'Tests' )
 ]
