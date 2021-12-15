@@ -11,6 +11,7 @@ This package is part of the Pharo AI project: It contains implementations, tests
 - [How to depend on it](#how-to-depend-on-it)
 - [Clustering metrics](#clustering-metrics)
 - [Regression metrics](#regression-metrics)
+- [Classification metrics](#classification-metrics)
 
 
 ## [How to install it](#how-to-install-it)  
@@ -140,4 +141,20 @@ metric := AIRootMeanSquaredError.
 yTrue := #( 3 -0.5 2 7 ).
 yPredicted := #( 2.5 0.0 2 8 ).
 metric computeForActual: yTrue predicted: yPredicted "0.9571734475374732"
+```
+
+## [Classification metrics](#classification-metrics)
+
+### Accuracy Score (`AIAccuracyScore`)
+
+The accuracy_score function computes the accuracy, either the fraction (default) or the count (normalize=False) of correct predictions.
+
+In multilabel classification, the function returns the subset accuracy. If the entire set of predicted labels for a sample strictly match with the true set of labels, then the subset accuracy is 1.0; otherwise it is 0.0.
+
+```st
+| yTrue yPredicted metric |
+metric := AIAccuracyScore new.
+yTrue := #( 0 1 2 3 ).
+yPredicted := #( 0 2 1 3 ).
+metric computeForActual: yTrue predicted: yPredicted "0.5"
 ```
