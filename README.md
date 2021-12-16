@@ -147,9 +147,7 @@ metric computeForActual: yTrue predicted: yPredicted "0.9571734475374732"
 
 ### Accuracy Score (`AIAccuracyScore`)
 
-The accuracy_score function computes the accuracy, either the fraction (default) or the count (normalize=False) of correct predictions.
-
-In multilabel classification, the function returns the subset accuracy. If the entire set of predicted labels for a sample strictly match with the true set of labels, then the subset accuracy is 1.0; otherwise it is 0.0.
+The accuracy_score function computes the accuracy, returning a fraction. The accuracy is defined as the sum of the correct predictions divided by the total number of predictions.
 
 ```st
 | yTrue yPredicted metric |
