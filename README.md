@@ -62,7 +62,7 @@ metric computeForActual: yTrue predicted: yPredicted "0.375"
 
 ### Mean Absolute Error (`AIMeanAbsoluteError`)
 
-The mean_absolute_error function computes mean absolute error, a risk metric corresponding to the expected value of the absolute error loss or -norm loss.
+The mean absolute error function computes mean absolute error, a risk metric corresponding to the expected value of the absolute error loss or -norm loss.
 
 ```st
 | yTrue yPredicted metric |
@@ -74,7 +74,7 @@ metric computeForActual: yTrue predicted: yPredicted "0.5"
 
 ### Mean Squared Logarithmic Error (`AIMeanSquaredLogarithmicError`)
 
-The mean_squared_log_error function computes a risk metric corresponding to the expected value of the squared logarithmic (quadratic) error or loss.
+The mean squared log error function computes a risk metric corresponding to the expected value of the squared logarithmic (quadratic) error or loss.
 
 ```st
 | yTrue yPredicted metric |
@@ -117,7 +117,7 @@ metric computeForActual: yTrue predicted: yPredicted "0.780320446995976"
 
 ### Max Error (`AIMaxError`)
 
-The max_error function computes the maximum residual error , a metric that captures the worst case error between the predicted value and the true value.
+The max error function computes the maximum residual error , a metric that captures the worst case error between the predicted value and the true value.
 In a perfectly fitted single output regression model, max_error would be 0 on the training set and though this would be highly unlikely in the real world,
 this metric shows the extent of error that the model had when it was fitted.
 
@@ -147,7 +147,7 @@ metric computeForActual: yTrue predicted: yPredicted "0.9571734475374732"
 
 ### Accuracy Score (`AIAccuracyScore`)
 
-The accuracy_score function computes the accuracy, returning a fraction. The accuracy is defined as the sum of the correct predictions divided by the total number of predictions.
+The accuracy score function computes the accuracy, returning a fraction. The accuracy is defined as the sum of the correct predictions divided by the total number of predictions.
 
 ```st
 | yTrue yPredicted metric |
