@@ -5,6 +5,8 @@ This package is part of the Pharo AI project: It contains implementations, tests
 ![Build status](https://github.com/pharo-ai/metrics/workflows/CI/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/pharo-ai/metrics/badge.svg?branch=master)](https://coveralls.io/github/pharo-ai/metrics?branch=master)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+[![Pharo version](https://img.shields.io/badge/Pharo-10-%23aac9ff.svg)](https://pharo.org/download)
+[![Pharo version](https://img.shields.io/badge/Pharo-9.0-%23aac9ff.svg)](https://pharo.org/download)
 
 ## Table of Contents  
 - [How to install it](#how-to-install-it)  
