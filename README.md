@@ -16,7 +16,7 @@ This package is part of the Pharo AI project: It contains implementations, tests
 - [Classification metrics](#classification-metrics)
 
 
-## [How to install it](#how-to-install-it)  
+##[How to install it
 
 ```smalltalk
 EpMonitor disableDuring: [ 
@@ -26,7 +26,7 @@ EpMonitor disableDuring: [
       load ]
 ```
 
-## [How to depend on it](#how-to-depend-on-it)
+## How to depend on it
 
 ```smalltalk
 spec 
@@ -34,7 +34,7 @@ spec
    with: [ spec repository: 'github://pharo-ai/metrics' ].
 ```
 
-## [Clustering metrics](#clustering-metrics)
+## Clustering metrics
 
 - Jaccard Index (`AIJaccardIndex`)
 - Rand Index (`AIRandIndex`)
@@ -45,7 +45,7 @@ spec
 - Weighted Jaccard Index (`AIWeightedJaccardIndex`)
 
 
-## [Regression metrics](#regression-metrics)
+## Regression metrics
 
 This package also contains regression metrics for testing the performance of linear models like: Logistic and Linear regression.
 Part of this explanation of the metrics were extracted from [scikit-learn documentation](https://scikit-learn.org/stable/modules/model_evaluation.html)
@@ -145,7 +145,7 @@ yPredicted := #( 2.5 0.0 2 8 ).
 metric computeForActual: yTrue predicted: yPredicted "0.9571734475374732"
 ```
 
-## [Classification metrics](#classification-metrics)
+## Classification metrics
 
 ### Accuracy Score (`AIAccuracyScore`)
 
