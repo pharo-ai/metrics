@@ -16,7 +16,7 @@ This package is part of the Pharo AI project: It contains implementations, tests
 - [Classification metrics](#classification-metrics)
 
 
-##[How to install it
+## How to install it
 
 ```smalltalk
 EpMonitor disableDuring: [ 
