@@ -1,14 +1,14 @@
-# Metrics for Machine Learning models
-
-For more information please refer to the wiki: https://github.com/pharo-ai/wiki/blob/master/wiki/DataExploration/Metrics.md
-
-This package is part of the Pharo AI project: It contains implementations, tests and documentation of different metrics for Machine Learning models. The evaluation metrics allows to assess how a trained Machine Learning model has performed.
-
 [![Build status](https://github.com/pharo-ai/metrics/workflows/CI/badge.svg)](https://github.com/pharo-ai/metrics/actions/workflows/test.yml)
 [![Coverage Status](https://coveralls.io/repos/github/pharo-ai/metrics/badge.svg?branch=master)](https://coveralls.io/github/pharo-ai/metrics?branch=master)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 [![Pharo version](https://img.shields.io/badge/Pharo-10-%23aac9ff.svg)](https://pharo.org/download)
 [![Pharo version](https://img.shields.io/badge/Pharo-9.0-%23aac9ff.svg)](https://pharo.org/download)
+
+# Metrics for Machine Learning models
+
+For more information please refer to the wiki: https://github.com/pharo-ai/wiki/blob/master/wiki/DataExploration/Metrics.md
+
+This package is part of the Pharo AI project: It contains implementations, tests and documentation of different metrics for Machine Learning models. The evaluation metrics allows to assess how a trained Machine Learning model has performed.
 
 ## Table of Contents  
 - [How to install it](#how-to-install-it)  
