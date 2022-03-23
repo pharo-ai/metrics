@@ -7,7 +7,7 @@ Class {
 { #category : #accessing }
 AIAccuracyScore class >> metricName [
 
-	^ 'Accuracy Score %'
+	^ 'Accuracy Score'
 ]
 
 { #category : #api }
