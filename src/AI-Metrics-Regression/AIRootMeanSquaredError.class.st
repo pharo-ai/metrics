@@ -7,6 +7,12 @@ Class {
 	#category : #'AI-Metrics-Regression'
 }
 
+{ #category : #accessing }
+AIRootMeanSquaredError class >> metricName [
+
+	^ 'Root Mean Squared Error'
+]
+
 { #category : #api }
 AIRootMeanSquaredError >> computeForActual: actualValues predicted: predictedValues [
 

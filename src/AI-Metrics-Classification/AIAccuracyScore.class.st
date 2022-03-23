@@ -4,6 +4,12 @@ Class {
 	#category : #'AI-Metrics-Classification'
 }
 
+{ #category : #accessing }
+AIAccuracyScore class >> metricName [
+
+	^ 'Accuracy Score %'
+]
+
 { #category : #api }
 AIAccuracyScore >> computeForActual: actualValues predicted: predictedValues [
 

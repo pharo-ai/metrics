@@ -11,6 +11,12 @@ Class {
 	#category : #'AI-Metrics-Regression'
 }
 
+{ #category : #accessing }
+AIMeanAbsoluteError class >> metricName [
+
+	^ 'Mean Absolute Error'
+]
+
 { #category : #api }
 AIMeanAbsoluteError >> computeForActual: actualValues predicted: predictedValues [
 

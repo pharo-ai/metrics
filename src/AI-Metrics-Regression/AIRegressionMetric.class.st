@@ -8,6 +8,12 @@ Class {
 	#category : #'AI-Metrics-Regression'
 }
 
+{ #category : #accessing }
+AIRegressionMetric class >> metricName [
+
+	^ self subclassResponsibility
+]
+
 { #category : #api }
 AIRegressionMetric >> computeForActual: actualValues predicted: predictedValues [
 

@@ -11,6 +11,12 @@ Class {
 	#category : #'AI-Metrics-Regression'
 }
 
+{ #category : #accessing }
+AIMeanSquaredError class >> metricName [
+
+	^ 'Mean Squared Error'
+]
+
 { #category : #api }
 AIMeanSquaredError >> computeForActual: actualValues predicted: predictedValues [
 

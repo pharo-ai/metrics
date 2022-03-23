@@ -20,6 +20,12 @@ Class {
 	#category : #'AI-Metrics-Regression'
 }
 
+{ #category : #accessing }
+AIR2Score class >> metricName [
+
+	^ 'R2 Score'
+]
+
 { #category : #api }
 AIR2Score >> computeForActual: actualValues predicted: predictedValues [
 

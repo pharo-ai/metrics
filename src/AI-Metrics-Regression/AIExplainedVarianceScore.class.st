@@ -13,6 +13,12 @@ Class {
 	#category : #'AI-Metrics-Regression'
 }
 
+{ #category : #accessing }
+AIExplainedVarianceScore class >> metricName [
+
+	^ 'Explained Variance Score'
+]
+
 { #category : #api }
 AIExplainedVarianceScore >> computeForActual: actualValues predicted: predictedValues [
 

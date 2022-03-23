@@ -13,6 +13,12 @@ Class {
 	#category : #'AI-Metrics-Regression'
 }
 
+{ #category : #accessing }
+AIMaxError class >> metricName [
+
+	^ 'Max Error'
+]
+
 { #category : #api }
 AIMaxError >> computeForActual: actualValues predicted: predictedValues [
 

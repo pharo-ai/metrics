@@ -11,6 +11,12 @@ Class {
 	#category : #'AI-Metrics-Regression'
 }
 
+{ #category : #accessing }
+AIMeanSquaredLogarithmicError class >> metricName [
+
+	^ 'Mean SquaredLogarithmic Error'
+]
+
 { #category : #api }
 AIMeanSquaredLogarithmicError >> computeForActual: actualValues predicted: predictedValues [
 
