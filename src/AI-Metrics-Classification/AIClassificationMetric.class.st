@@ -1,3 +1,6 @@
+"
+I am an abstract class for the classification metrics.
+"
 Class {
 	#name : #AIClassificationMetric,
 	#superclass : #Object,

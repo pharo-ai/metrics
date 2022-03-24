@@ -1,8 +1,25 @@
+"
+Compute the precision.
+
+The precision is the ratio
+
+`truePositives / (truePositives + falsePositives)`
+
+where tp is the number of true positives and fp the number of false positives. The precision is intuitively the ability of the classifier not to label as positive a sample that is negative.
+
+The best value is 1 and the worst value is 0.
+"
 Class {
 	#name : #AIPrecisionScore,
 	#superclass : #AIClassificationMetric,
 	#category : #'AI-Metrics-Classification'
 }
+
+{ #category : #accessing }
+AIPrecisionScore class >> metricName [
+
+	^ 'Precision Score'
+]
 
 { #category : #api }
 AIPrecisionScore >> computeForActual: actualValues predicted: predictedValues [

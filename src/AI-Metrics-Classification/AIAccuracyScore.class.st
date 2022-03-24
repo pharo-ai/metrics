@@ -1,3 +1,8 @@
+"
+Accuracy classification score.
+
+In multilabel classification, this function computes subset accuracy: the set of labels predicted for a sample must exactly match the corresponding set of labels.
+"
 Class {
 	#name : #AIAccuracyScore,
 	#superclass : #AIClassificationMetric,
