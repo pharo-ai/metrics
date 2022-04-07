@@ -8,15 +8,9 @@
 
 For more information please refer to the wiki: https://github.com/pharo-ai/wiki/blob/master/wiki/DataExploration/Metrics.md
 
+There is explained with more detail the available metrics and how to use them.
+
 This package is part of the Pharo AI project: It contains implementations, tests and documentation of different metrics for Machine Learning models. The evaluation metrics allows to assess how a trained Machine Learning model has performed.
-
-## Table of Contents  
-- [How to install it](#how-to-install-it)  
-- [How to depend on it](#how-to-depend-on-it)
-- [Clustering metrics](#clustering-metrics)
-- [Regression metrics](#regression-metrics)
-- [Classification metrics](#classification-metrics)
-
 
 ## How to install it
 
@@ -36,25 +30,11 @@ spec
    with: [ spec repository: 'github://pharo-ai/metrics' ].
 ```
 
-## Clustering metrics
+Types of metrics: 
 
-- Jaccard Index (`AIJaccardIndex`)
-- Rand Index (`AIRandIndex`)
-- Silhouette Index (`AISilhouetteIndex`)
-- Adjusted Rand Index (`AIAdjustedRandIndex`)
-- Fowlkes Mallows Index (`AIFowlkesMallowsIndex`)
-- Mirkin Index (`AIMirkinIndex`)
-- Weighted Jaccard Index (`AIWeightedJaccardIndex`)
-
-## Regression metrics
-
-- Mean Squared Error
-- Mean Absolute Error
-- Mean Squared Logarithmic Error
-- R2 Score
-- Root Mean Squared Error
-- Max Error
-- Explained Variance Score
+- Clustering metrics
+- Regression metrics
+- Classification metrics
 
 ### Example: Mean Squared Error (`AIMeanSquaredError`)
 
@@ -65,10 +45,6 @@ yTrue := #( 3 -0.5 2 7 ).
 yPredicted := #( 2.5 0.0 2 8 ).
 metric computeForActual: yTrue predicted: yPredicted "0.375"
 ```
-
-## Classification metrics
-
-- Accuracy Score
 
 ### Example: Accuracy Score (`AIAccuracyScore`)
 
