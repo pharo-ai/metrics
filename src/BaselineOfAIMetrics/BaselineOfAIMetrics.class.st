@@ -12,13 +12,13 @@ BaselineOfAIMetrics >> baseline: spec [
 	<baseline>
 
 	spec for: #(common) do: [ 
-		"Baselines"
-    	spec
-    		baseline: 'PolyMath'
-  	 	 	with: [ 
-				spec 
-					repository: 'github://PolyMathOrg/PolyMath:master/src';
-					loads: #('Core') ].
+		"External dependencies"
+		spec
+			baseline: 'AIExternalDependencies'
+			with: [ spec
+				loads: #('PolyMath');
+				repository: 'github://pharo-ai/external-dependencies' ].
+		
 		"Packages"
 		spec
 			package: 'AI-Metrics' with: [ spec requires: #('PolyMath') ];
