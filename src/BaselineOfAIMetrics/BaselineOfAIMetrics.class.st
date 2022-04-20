@@ -16,7 +16,7 @@ BaselineOfAIMetrics >> baseline: spec [
 		spec
 			baseline: 'AIExternalDependencies'
 			with: [ spec
-				loads: #('PolyMath');
+				loads: #('PolyMathGroup');
 				repository: 'github://pharo-ai/external-dependencies' ].
 		
 		"Packages"
