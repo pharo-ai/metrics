@@ -21,7 +21,7 @@ BaselineOfAIMetrics >> baseline: spec [
 		
 		"Packages"
 		spec
-			package: 'AI-Metrics' with: [ spec requires: #('PolyMath') ];
+			package: 'AI-Metrics' with: [ spec requires: #( 'AIExternalDependencies' ) ];
 			package: 'AI-Metrics-Tests' with: [ spec requires: #('AI-Metrics') ];
 			package: 'AI-Metrics-Regression';
 			package: 'AI-Metrics-Regression-Tests' with: [ spec requires: #('AI-Metrics-Regression') ];
