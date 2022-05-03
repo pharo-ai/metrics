@@ -14,14 +14,11 @@ BaselineOfAIMetrics >> baseline: spec [
 	spec for: #(common) do: [ 
 		"External dependencies"
 		spec
-			baseline: 'AIExternalDependencies'
-			with: [ spec
-				loads: #('PolyMathGroup');
-				repository: 'github://pharo-ai/external-dependencies' ].
+    			baseline: 'AIExternalDataFrame' with: [ spec repository: 'github://pharo-ai/external-dependencies' ].
 		
 		"Packages"
 		spec
-			package: 'AI-Metrics' with: [ spec requires: #( 'AIExternalDependencies' ) ];
+			package: 'AI-Metrics' with: [ spec requires: #( 'AIExternalDataFrame' ) ];
 			package: 'AI-Metrics-Tests' with: [ spec requires: #('AI-Metrics') ];
 			package: 'AI-Metrics-Regression';
 			package: 'AI-Metrics-Regression-Tests' with: [ spec requires: #('AI-Metrics-Regression') ];
